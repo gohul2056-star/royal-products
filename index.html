@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #F8F9F3; color: #8B735B; }
+        .brand-green { color: #5C9343; }
+        .bg-brand-green { background-color: #5C9343; }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <nav class="flex items-center justify-between px-10 py-5">
+        <a href="#" class="flex items-center gap-2">
+            <img src="logo.jpg" alt="Royal Logo"  class="w-8 h-8 rounded-full bg-slate-900 object-contain" >
+            <span class="text-xl font-bold brand-green">Royal Products</span>
+        </a>
+        <div class="flex items-center gap-6">
+            <i class="fas fa-shopping-cart text-gray-400 cursor-pointer"></i>
+            <button class="bg-brand-green text-white px-5 py-2 rounded-lg flex items-center gap-2 font-semibold transition hover:opacity-90">
+                <i class="fas fa-sign-in-alt text-sm"></i> Login
+            </button>
+        </div>
+    </nav>
+
+    <main class="flex-grow">
+        <section class="flex flex-col items-center justify-center py-24 text-center">
+            <h1 class="flex items-center gap-4 text-5xl md:text-7xl font-bold brand-green">
+                Royal 
+                <img src="logo.jpg" alt="Royal Products Logo" class="w-16 h-16 md:w-24 md:h-24 rounded-full shadow-md bg-white p-1">
+                Products
+            </h1>
+            <p class="text-xl font-medium text-orange-900/70 mt-4 mb-10">Get Fit, Feel Great</p>
+            <button class="bg-brand-green text-white px-8 py-3 rounded-lg flex items-center gap-3 text-lg font-medium transition hover:shadow-lg">
+                Explore Our Products <i class="fas fa-arrow-right text-sm"></i>
+            </button>
+        </section>
+
+        <section class="max-w-4xl mx-auto px-6 pb-20 text-center">
+            <h2 class="text-4xl font-bold brand-green mb-2">Our Product Catalogue</h2>
+            <p class="mb-10 text-sm">Explore a curated selection of our finest products.</p>
+            <div class="flex flex-wrap justify-center gap-3">
+                <button class="bg-brand-green text-white px-6 py-2 rounded-md font-medium">All Categories</button>
+                <button class="bg-white border px-6 py-2 rounded-md font-medium hover:bg-gray-50 transition">Rice</button>
+                <button class="bg-white border px-6 py-2 rounded-md font-medium hover:bg-gray-50 transition">Snacks</button>
+                <button class="bg-white border px-6 py-2 rounded-md font-medium hover:bg-gray-50 transition">Organic Powder</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-gray-200 pt-16 pb-8 px-10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+            <section>
+                <h3 class="font-bold brand-green mb-5">Contact Us</h3>
+                <div class="space-y-3 text-sm">
+                    <p class="flex items-center gap-3"><i class="far fa-envelope"></i> support@royalproducts.com</p>
+                    <p class="flex items-center gap-3"><i class="fas fa-phone-alt"></i> +91 9566075664</p>
+                    <p class="flex items-start gap-3"><i class="fas fa-map-marker-alt mt-1"></i> JXX5+RCX, Srivaikuntam, India</p>
+                </div>
+            </section>
+            <section>
+                <h3 class="font-bold brand-green mb-5">Quick Links</h3>
+                <div class="flex flex-col gap-3 text-sm">
+                    <a href="#" class="hover:underline">Home</a>
+                    <a href="#" class="hover:underline">Admin</a>
+                </div>
+            </section>
+            <section>
+                <h3 class="font-bold brand-green mb-5">About Us</h3>
+                <p class="text-sm leading-relaxed">At Royal Products, we are dedicated to providing the highest quality items to help you achieve your fitness and wellness goals.</p>
+            </section>
+        </div>
+        <p class="text-center text-xs opacity-70 border-t pt-8">© 2026 Royal Products. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
