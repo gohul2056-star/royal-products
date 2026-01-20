@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, sans-serif;
+      background-color: #f9fafb;
+      color: #111827;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      width: 100%;
+      max-width: 400px;
+      padding: 1.5rem;
+    }
+
+    .card-header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-title {
+      font-size: 1.75rem;
+      font-weight: bold;
+      color: #2563eb; /* Primary color */
+    }
+
+    .card-description {
+      font-size: 0.95rem;
+      color: #6b7280;
+      margin-top: 0.25rem;
+    }
+
+    .form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-label {
+      font-weight: 500;
+      margin-bottom: 0.25rem;
+    }
+
+    .form-input {
+      padding: 0.5rem 0.75rem;
+      border: 1px solid #d1d5db;
+      border-radius: 0.375rem;
+      font-size: 1rem;
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+    }
+
+    .form-message {
+      font-size: 0.8rem;
+      color: #dc2626;
+      margin-top: 0.25rem;
+    }
+
+    .btn {
+      background-color: #2563eb;
+      color: #fff;
+      font-weight: 600;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 0.375rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .btn:hover {
+      background-color: #1d4ed8;
+    }
+
+    .btn:disabled {
+      background-color: #93c5fd;
+      cursor: not-allowed;
+    }
+
+    .signup-text {
+      margin-top: 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    .link {
+      color: #2563eb;
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+    .link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-header">
+        <h1 class="card-title">Welcome Back</h1>
+        <p class="card-description">Sign in to continue to your account.</p>
+      </div>
+      <div class="card-content">
+        <form class="form">
+          <div class="form-item">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" class="form-input" required>
+            <small class="form-message"></small>
+          </div>
+          <div class="form-item">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" name="password" placeholder="••••••••" class="form-input" required minlength="6">
+            <small class="form-message"></small>
+          </div>
+          <button type="submit" class="btn">Sign In</button>
+        </form>
+        <div class="signup-text">
+          Don't have an account?
+          <a href="signup.html" class="link">Sign up</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
