@@ -1,158 +1,214 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Login Page</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: system-ui, sans-serif;
-      background-color: #f9fafb;
-      color: #111827;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 100vh;
-    }
-
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 2rem;
-    }
-
-    .card {
-      background: #fff;
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      width: 100%;
-      max-width: 400px;
-      padding: 1.5rem;
-    }
-
-    .card-header {
-      text-align: center;
-      margin-bottom: 1.5rem;
-    }
-
-    .card-title {
-      font-size: 1.75rem;
-      font-weight: bold;
-      color: #2563eb; /* Primary color */
-    }
-
-    .card-description {
-      font-size: 0.95rem;
-      color: #6b7280;
-      margin-top: 0.25rem;
-    }
-
-    .form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .form-item {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .form-label {
-      font-weight: 500;
-      margin-bottom: 0.25rem;
-    }
-
-    .form-input {
-      padding: 0.5rem 0.75rem;
-      border: 1px solid #d1d5db;
-      border-radius: 0.375rem;
-      font-size: 1rem;
-    }
-
-    .form-input:focus {
-      outline: none;
-      border-color: #2563eb;
-      box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
-    }
-
-    .form-message {
-      font-size: 0.8rem;
-      color: #dc2626;
-      margin-top: 0.25rem;
-    }
-
-    .btn {
-      background-color: #2563eb;
-      color: #fff;
-      font-weight: 600;
-      padding: 0.75rem;
-      border: none;
-      border-radius: 0.375rem;
-      cursor: pointer;
-      transition: background-color 0.2s;
-    }
-
-    .btn:hover {
-      background-color: #1d4ed8;
-    }
-
-    .btn:disabled {
-      background-color: #93c5fd;
-      cursor: not-allowed;
-    }
-
-    .signup-text {
-      margin-top: 1.5rem;
-      text-align: center;
-      font-size: 0.9rem;
-    }
-
-    .link {
-      color: #2563eb;
-      font-weight: 500;
-      text-decoration: none;
-    }
-
-    .link:hover {
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Royal Products - Get Fit, Feel Great</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #F8F9F3; 
+        }
+        .brand-green { color: #5C9343; }
+        .bg-brand-green { background-color: #5C9343; }
+        .text-muted-brown { color: #8B735B; }
+        #Pro{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 20px;
+            justify-items: center;
+        }
+        .Product{
+            width: 20vw;
+            height: 75vh;
+            background-color: white;
+            border-radius: 20px;
+            position: relative;
+        }
+        .Product img{
+            width: 100%;
+            height: 60%;
+            border-radius: 20px;
+        }
+        .Product span{
+            background-color: #E5E5EA;
+            margin-left: 10px;
+            border-radius: 5px;
+            padding: 3px;
+            font-size: small;
+        }
+        .Product h3{
+            font-size: large;
+            font-weight: 600;
+            padding-left: 10px;
+            
+        }
+        .Product h2{
+            font-size: large;
+            font-weight: 600;
+            color: #5C9343;
+            padding-top: 10px;
+            padding-left: 10px;
+            position: absolute;
+            bottom: 70px;
+        }
+        .Product button{
+            text-align: center;
+            background-color: #5C9343;
+            width: 90%;
+            height: 40px;
+            margin-left: 5%;
+            margin-top: 5%;
+            border-radius: 10px;
+            color: white;
+            position: absolute;
+            bottom: 20px;
+        }
+        
+    </style>
 </head>
-<body>
-  <div class="container">
-    <div class="card">
-      <div class="card-header">
-        <h1 class="card-title">Welcome Back</h1>
-        <p class="card-description">Sign in to continue to your account.</p>
-      </div>
-      <div class="card-content">
-        <form class="form">
-          <div class="form-item">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" name="email" placeholder="you@example.com" class="form-input" required>
-            <small class="form-message"></small>
-          </div>
-          <div class="form-item">
-            <label for="password" class="form-label">Password</label>
-            <input type="password" id="password" name="password" placeholder="••••••••" class="form-input" required minlength="6">
-            <small class="form-message"></small>
-          </div>
-          <button type="submit" class="btn">Sign In</button>
-        </form>
-        <div class="signup-text">
-          Don't have an account?
-          <a href="signup.html" class="link">Sign up</a>
+<body class="min-h-screen flex flex-col">
+
+    <header class="flex items-center justify-between px-8 py-4 bg-transparent">
+        <div class="flex items-center gap-2">
+            <div class="w-8 h-8 bg-[#1e293b] rounded-full flex items-center justify-center overflow-hidden">
+                <i class="fas fa-brain text-white text-xs"></i>
+            </div>
+            <span class="text-xl font-bold brand-green">Royal Products</span>
         </div>
-      </div>
-    </div>
-  </div>
+        
+        <div class="flex items-center gap-6">
+            <button class="text-gray-600 hover:text-gray-900">
+                <i class="fas fa-shopping-cart text-lg"></i>
+            </button>
+            <button class="bg-brand-green text-white px-5 py-1.5 rounded-lg flex items-center gap-2 font-semibold hover:opacity-90 transition">
+                <i class="fas fa-sign-in-alt text-sm"></i> Login
+            </button>
+        </div>
+    </header>
+
+    <main class="flex-grow">
+        <section class="flex flex-col items-center justify-center pt-20 pb-24 text-center">
+            <div class="flex items-center gap-4 mb-2">
+                <h1 class="text-5xl md:text-6xl font-bold brand-green">Royal</h1>
+                <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full shadow-sm flex items-center justify-center overflow-hidden border border-gray-100">
+                     <i class="fas fa-brain brand-green text-3xl"></i>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold brand-green">Products</h1>
+            </div>
+            <p class="text-xl text-[#8B5E3C] opacity-90 mb-10 font-medium">Get Fit, Feel Great</p>
+            
+            <button class="bg-brand-green text-white px-8 py-3 rounded-lg flex items-center gap-3 text-lg font-medium hover:shadow-lg transition">
+                Explore Our Products <i class="fas fa-arrow-right text-sm"></i>
+            </button>
+        </section>
+
+        <section class="max-w-7xl mx-auto px-8 mb-20">
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold brand-green mb-3">Our Product Catalogue</h2>
+                <p class="text-muted-brown font-medium">Explore a curated selection of our finest products.</p>
+            </div>
+
+            <div class="flex flex-wrap justify-center gap-3">
+                <button class="bg-brand-green text-white px-6 py-2 rounded-lg font-medium">All Categories</button>
+                <button class="bg-white border border-gray-200 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-50">Rice</button>
+                <button class="bg-white border border-gray-200 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-50">Snacks</button>
+                <button class="bg-white border border-gray-200 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-50">Organic Powder</button>
+            </div>
+        </section>
+        <section id="Pro">
+            <div class="Product">
+                <img src="Karupu Kavuni.png" alt="Karuppu Kavuni Rice">
+                <span> Rice </span>
+                <h3>Karuppu Kavuni Rice</h3>
+                <h2>INR 250.00</h2>
+                <button>Buy now</button>
+            </div>
+            <div class="Product">
+                <img src="Ootu Mavu.png" alt="Oottu Mavu">
+                <span> Snacks </span>
+                <h3>Oottu Mavu</h3>
+                <h2>INR 130.00</h2>
+                <button>Buy now</button>
+            </div>
+            <div class="Product">
+                <img src="karuppu kavuni rice kali kanji mix.png" alt="Karuppu Kavuni Rice Kali/Kanji Mix">
+                <span> Organic Powder </span>
+                <h3>Karuppu Kavuni Rice Kali/Kanji Mix</h3>
+                <h2>INR 210.00</h2>
+                <button>Buy now</button>
+            </div>
+            <div class="Product">
+                <img src="Karuppu Ulundhu Kali Kanji Mix.png" alt="Karuppu Ulundhu Kali/Kanji Mix">
+                <span> Organic Powder </span>
+                <h3>Karuppu Ulundhu Kali/Kanji Mix</h3>
+                <h2>INR 180.00</h2>
+                <button>Buy now</button>
+            </div>
+            <div class="Product">
+                <img src="ABC malt.png" alt="ABC Malt Power">
+                <span> Organic Powder </span>
+                <h3>ABC Malt Power</h3>
+                <h2>INR 220.00</h2>
+                <button>Buy now</button>
+            </div>
+            <div class="Product">
+                <img src="logo.jpg" alt="Health Mix">
+                <span> Organic Powder </span>
+                <h3>Health Mix</h3>
+                <h2>INR 250.00</h2>
+                <button>Buy now</button>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pt-16 pb-8 px-8 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
+            
+            <div>
+                <h3 class="font-bold brand-green mb-6 text-lg">Contact Us</h3>
+                <ul class="space-y-4 text-muted-brown">
+                    <li class="flex items-start gap-3">
+                        <i class="far fa-envelope mt-1.5 text-sm"></i>
+                        <span>support@royalproducts.com</span>
+                    </li>
+                    <li class="flex items-center gap-3">
+                        <i class="fas fa-phone-alt text-sm"></i>
+                        <span>+91 9566075664</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fas fa-map-marker-alt mt-1.5 text-sm"></i>
+                        <span class="leading-relaxed">JXX5+RCX, Srivaikuntam, Srimulakkarai, Tamil Nadu, India</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-bold brand-green mb-6 text-lg">Quick Links</h3>
+                <ul class="space-y-3 text-muted-brown">
+                    <li><a href="#" class="hover:brand-green transition">Home</a></li>
+                    <li><a href="#" class="hover:brand-green transition">Admin</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="font-bold brand-green mb-6 text-lg">About Us</h3>
+                <p class="text-muted-brown leading-relaxed">
+                    At Royal Products, we are dedicated to providing the highest quality items 
+                    to help you achieve your fitness and wellness goals.
+                </p>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-200 pt-8 text-center">
+            <p class="text-muted-brown text-sm font-medium">
+                © 2026 Royal Products. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
 </body>
 </html>
