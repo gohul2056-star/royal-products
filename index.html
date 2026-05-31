@@ -1,236 +1,1021 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Royal Products - Get Fit, Feel Great</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <title>Royal Products | Premium Traditional Nutrition</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
         body {
-            font-family: 'Inter', sans-serif;
-            background-color: #F8F9F3; 
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #F8F9F3;
+            color: #1C2316;
+            overflow-x: hidden;
         }
-        .brand-green { color: #5C9343; }
-        .bg-brand-green { background-color: #5C9343; }
-        .text-muted-brown { color: #8B735B; }
-        #Pro{
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            gap: 20px;
-            justify-items: center;
+        .premium-blur {
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
         }
-        .Product{
-            width: 20vw;
-            height: 75vh;
-            background-color: white;
-            border-radius: 20px;
-            position: relative;
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-        .Product img{
-            width: 100%;
-            height: 60%;
-            border-radius: 20px;
+        .animate-fade-in-up {
+            animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
         }
-        .Product span{
-            background-color: #E5E5EA;
-            margin-left: 10px;
-            border-radius: 5px;
-            padding: 3px;
-            font-size: small;
+        .skeleton {
+            background: linear-gradient(90deg, #f0f1eb 25%, #e4e7db 50%, #f0f1eb 75%);
+            background-size: 200% 100%;
+            animation: loadingSkeleton 1.5s infinite;
         }
-        .Product h3{
-            font-size: large;
-            font-weight: 600;
-            padding-left: 10px;
-            
+        @keyframes loadingSkeleton {
+            0% { background-position: 200% 0; }
+            100% { background-position: -200% 0; }
         }
-        .Product h2{
-            font-size: large;
-            font-weight: 600;
-            color: #5C9343;
-            padding-top: 10px;
-            padding-left: 10px;
-            position: absolute;
-            bottom: 70px;
+        .scrollbar-none::-webkit-scrollbar {
+            display: none;
         }
-        .Product button{
-            text-align: center;
-            background-color: #5C9343;
-            width: 90%;
-            height: 40px;
-            margin-left: 5%;
-            margin-top: 5%;
-            border-radius: 10px;
-            color: white;
-            position: absolute;
-            bottom: 20px;
+        .scrollbar-none {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
         }
-        
     </style>
 </head>
-<body class="min-h-screen flex flex-col">
+<body class="antialiased selection:bg-[#5C9343] selection:text-white">
 
-<<<<<<< HEAD
-    <header class="flex items-center justify-between px-8 py-4 bg-transparent">
-        <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-[#1e293b] rounded-full flex items-center justify-center overflow-hidden">
-                <i class="fas fa-brain text-white text-xs"></i>
-            </div>
-            <span class="text-xl font-bold brand-green">Royal Products</span>
-        </div>
-        
-        <div class="flex items-center gap-6">
-            <button class="text-gray-600 hover:text-gray-900">
-                <i class="fas fa-shopping-cart text-lg"></i>
-            </button>
-            <button class="bg-brand-green text-white px-5 py-1.5 rounded-lg flex items-center gap-2 font-semibold hover:opacity-90 transition">
-                <i class="fas fa-sign-in-alt text-sm"></i> Login
-            </button>
-        </div>
-    </header>
-<hr>
-=======
-   <header class="flex items-center justify-between px-8 py-4 bg-transparent">
-  <div class="flex items-center gap-2">
-    <div class="w-8 h-8 bg-[#1e293b] rounded-full flex items-center justify-center overflow-hidden">
-      <i class="fas fa-brain text-white text-xs"></i>
+    <div class="bg-[#8B735B] text-white text-xs tracking-widest uppercase py-2.5 px-4 text-center font-medium shadow-inner transition-all duration-300">
+        <span class="inline-block animate-pulse mr-2">✦</span> Complimentary Express Shipping on Orders Above ₹1,500
     </div>
-    <span class="text-xl font-bold brand-green">Royal Products</span>
-  </div>
-  
-  <div class="flex items-center gap-6">
-    <button class="text-gray-600 hover:text-gray-900">
-      <i class="fas fa-shopping-cart text-lg"></i>
-    </button>
-    <a href="login.html" 
-       class="bg-brand-green text-white px-5 py-1.5 rounded-lg flex items-center gap-2 font-semibold hover:opacity-90 transition">
-      <i class="fas fa-sign-in-alt text-sm"></i> Login
-    </a>
-  </div>
+
+   <header class="sticky top-0 z-50 bg-[#F8F9F3]/80 premium-blur border-b border-[#8B735B]/10 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+
+        <!-- Logo + Brand Name -->
+        <div class="flex items-center space-x-3 cursor-pointer" onclick="Navigation.navigate('home')">
+
+            <!-- Logo Image -->
+            <img
+                src="D:\\rsr\\royal-products-\\royal-products\\assets\\logo.jpg"
+                alt="Royal Products Logo"
+                class="w-11 h-11 rounded-full object-cover border-2 border-[#5C9343] shadow-md transition-all duration-300 hover:scale-110"
+            >
+
+            <!-- Brand Text -->
+            <span class="text-2xl font-bold tracking-tight text-[#1C2316]">
+                ROYAL<span class="text-[#5C9343] font-light">PRODUCTS</span>
+            </span>
+
+        </div>
+
+        <!-- Navigation -->
+        <nav class="hidden md:flex space-x-10 text-sm font-medium tracking-wide uppercase">
+            <a onclick="Navigation.navigate('home')"
+               class="text-[#1C2316] hover:text-[#5C9343] transition-colors cursor-pointer py-2">
+                Home
+            </a>
+
+            <a onclick="Navigation.navigate('shop')"
+               class="text-[#1C2316] hover:text-[#5C9343] transition-colors cursor-pointer py-2">
+                Shop Collection
+            </a>
+
+            <a onclick="Navigation.navigate('home', 'benefits-section')"
+               class="text-[#1C2316] hover:text-[#5C9343] transition-colors cursor-pointer py-2">
+                Wellness Philosophy
+            </a>
+
+            <span id="admin-nav-link" class="hidden">
+                <a onclick="Navigation.navigate('admin')"
+                   class="text-amber-700 hover:text-[#5C9343] font-bold transition-colors cursor-pointer py-2">
+                    Admin Product Update
+                </a>
+            </span>
+        </nav>
+
+        <!-- Right Side Icons -->
+        <div class="flex items-center space-x-6">
+
+            <!-- Search -->
+            <button onclick="Navigation.navigate('shop')"
+                    class="text-[#1C2316] hover:text-[#5C9343] transition-colors relative p-1.5 focus:outline-none">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.8"
+                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                </svg>
+            </button>
+
+            <!-- Account -->
+            <button onclick="Navigation.navigate('login')"
+                    class="text-[#1C2316] hover:text-[#5C9343] transition-colors relative p-1.5 focus:outline-none"
+                    title="User Account Portal">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.8"
+                          d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M12 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                </svg>
+            </button>
+
+            <!-- Cart -->
+            <button onclick="CartEngine.toggleDrawer()"
+                    class="text-[#1C2316] hover:text-[#5C9343] transition-colors relative p-1.5 focus:outline-none">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="1.8"
+                          d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                </svg>
+
+                <span id="cart-badge"
+                      class="absolute -top-1 -right-1 bg-[#5C9343] text-white rounded-full w-4 h-4 text-[10px] flex items-center justify-center font-bold opacity-0 transition-opacity duration-300">
+                    0
+                </span>
+            </button>
+
+        </div>
+
+    </div>
 </header>
 
->>>>>>> 754586b7bd36ef2ee7a9f0cc016289e568136dd9
-    <main class="flex-grow">
-        <section class="flex flex-col items-center justify-center pt-20 pb-24 text-center">
-            <div class="flex items-center gap-4 mb-2">
-                <h1 class="text-5xl md:text-6xl font-bold brand-green">Royal</h1>
-                <div class="w-16 h-16 md:w-20 md:h-20 bg-white rounded-full shadow-sm flex items-center justify-center overflow-hidden border border-gray-100">
-                     <i class="fas fa-brain brand-green text-3xl"></i>
-                </div>
-                <h1 class="text-5xl md:text-6xl font-bold brand-green">Products</h1>
-            </div>
-            <p class="text-xl text-[#8B5E3C] opacity-90 mb-10 font-medium">Get Fit, Feel Great</p>
-            
-            <button class="bg-brand-green text-white px-8 py-3 rounded-lg flex items-center gap-3 text-lg font-medium hover:shadow-lg transition">
-                Explore Our Products <i class="fas fa-arrow-right text-sm"></i>
+    <main id="app-view-container" class="min-h-screen"></main>
+
+    <div id="cart-drawer-overlay" class="fixed inset-0 z-50 bg-black/40 opacity-0 pointer-events-none transition-opacity duration-500 premium-blur" onclick="CartEngine.toggleDrawer()"></div>
+    <div id="cart-drawer" class="fixed right-0 top-0 bottom-0 z-50 w-full max-w-md bg-[#F8F9F3] shadow-[0_0_50px_rgba(0,0,0,0.15)] translate-x-full transition-transform duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col">
+        <div class="p-6 border-b border-[#8B735B]/10 flex justify-between items-center bg-white">
+            <h3 class="text-lg font-semibold uppercase tracking-wider text-[#1C2316]">Shopping Collection</h3>
+            <button onclick="CartEngine.toggleDrawer()" class="text-[#1C2316] hover:text-red-600 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
-        </section>
+        </div>
+        <div id="cart-drawer-items" class="flex-1 overflow-y-auto p-6 space-y-6">
+            </div>
+        <div class="p-6 border-t border-[#8B735B]/10 bg-white space-y-4">
+            <div class="flex justify-between text-base font-medium text-[#1C2316]">
+                <span>Estimated Valuation</span>
+                <span id="cart-drawer-total">₹0.00</span>
+            </div>
+            <p class="text-xs text-[#8B735B]">Taxes and custom logistical overhead calculated at acquisition window.</p>
+            <button onclick="CartEngine.triggerCheckout()" class="w-full bg-[#5C9343] hover:bg-[#4a7735] text-white text-sm font-semibold uppercase tracking-widest py-4 rounded-xl transition-all shadow-md active:scale-[0.99]">Proceed To Payment</button>
+        </div>
+    </div>
 
-        <section class="max-w-7xl mx-auto px-8 mb-20">
-            <div class="text-center mb-10">
-                <h2 class="text-4xl font-bold brand-green mb-3">Our Product Catalogue</h2>
-                <p class="text-muted-brown font-medium">Explore a curated selection of our finest products.</p>
+    <footer class="bg-[#1C2316] text-[#F8F9F3] pt-20 pb-12 border-t border-[#8B735B]/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="space-y-6">
+                <span class="text-xl font-bold tracking-tight uppercase">Royal <span class="text-[#5C9343]">Products</span></span>
+                <p class="text-sm text-[#F8F9F3]/70 leading-relaxed">Honoring lineage and dynamic health by reconstructing traditional Tamil dietary nutrition systems for the global scale.</p>
             </div>
-
-            <div class="flex flex-wrap justify-center gap-3">
-                <button class="bg-brand-green text-white px-6 py-2 rounded-lg font-medium">All Categories</button>
-                <button class="bg-white border border-gray-200 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-50">Rice</button>
-                <button class="bg-white border border-gray-200 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-50">Snacks</button>
-                <button class="bg-white border border-gray-200 text-gray-700 px-6 py-2 rounded-lg font-medium hover:bg-gray-50">Organic Powder</button>
-            </div>
-        </section>
-        <section id="Pro">
-            <div class="Product">
-                <img src="Karupu Kavuni.png" alt="Karuppu Kavuni Rice">
-                <span> Rice </span>
-                <h3>Karuppu Kavuni Rice</h3>
-                <h2>INR 250.00</h2>
-                <button>Buy now</button>
-            </div>
-            <div class="Product">
-                <img src="Ootu Mavu.png" alt="Oottu Mavu">
-                <span> Snacks </span>
-                <h3>Oottu Mavu</h3>
-                <h2>INR 130.00</h2>
-                <button>Buy now</button>
-            </div>
-            <div class="Product">
-                <img src="karuppu kavuni rice kali kanji mix.png" alt="Karuppu Kavuni Rice Kali/Kanji Mix">
-                <span> Organic Powder </span>
-                <h3>Karuppu Kavuni Rice Kali/Kanji Mix</h3>
-                <h2>INR 210.00</h2>
-                <button>Buy now</button>
-            </div>
-            <div class="Product">
-                <img src="Karuppu Ulundhu Kali Kanji Mix.png" alt="Karuppu Ulundhu Kali/Kanji Mix">
-                <span> Organic Powder </span>
-                <h3>Karuppu Ulundhu Kali/Kanji Mix</h3>
-                <h2>INR 180.00</h2>
-                <button>Buy now</button>
-            </div>
-            <div class="Product">
-                <img src="ABC malt.png" alt="ABC Malt Power">
-                <span> Organic Powder </span>
-                <h3>ABC Malt Power</h3>
-                <h2>INR 220.00</h2>
-                <button>Buy now</button>
-            </div>
-            <div class="Product">
-                <img src="logo.jpg" alt="Health Mix">
-                <span> Organic Powder </span>
-                <h3>Health Mix</h3>
-                <h2>INR 250.00</h2>
-                <button>Buy now</button>
-            </div>
-        </section>
-    </main>
-
-    <footer class="pt-16 pb-8 px-8 border-t border-gray-200">
-        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
-            
             <div>
-                <h3 class="font-bold brand-green mb-6 text-lg">Contact Us</h3>
-                <ul class="space-y-4 text-muted-brown">
-                    <li class="flex items-start gap-3">
-                        <i class="far fa-envelope mt-1.5 text-sm"></i>
-                        <span>support@royalproducts.com</span>
-                    </li>
-                    <li class="flex items-center gap-3">
-                        <i class="fas fa-phone-alt text-sm"></i>
-                        <span>+91 9566075664</span>
-                    </li>
-                    <li class="flex items-start gap-3">
-                        <i class="fas fa-map-marker-alt mt-1.5 text-sm"></i>
-                        <span class="leading-relaxed">JXX5+RCX, Srivaikuntam, Srimulakkarai, Tamil Nadu, India</span>
-                    </li>
+                <h4 class="text-xs font-semibold tracking-widest uppercase text-[#5C9343] mb-6">Curated Collections</h4>
+                <ul class="space-y-3 text-sm text-[#F8F9F3]/70">
+                    <li><a onclick="Navigation.navigate('shop')" class="hover:text-white transition-colors cursor-pointer">Heritage Grains</a></li>
+                    <li><a onclick="Navigation.navigate('shop')" class="hover:text-white transition-colors cursor-pointer">Nutritional Elixirs</a></li>
+                    <li><a onclick="Navigation.navigate('shop')" class="hover:text-white transition-colors cursor-pointer">Restorative Mixes</a></li>
                 </ul>
             </div>
-
             <div>
-                <h3 class="font-bold brand-green mb-6 text-lg">Quick Links</h3>
-                <ul class="space-y-3 text-muted-brown">
-                    <li><a href="#" class="hover:brand-green transition">Home</a></li>
-                    <li><a href="#" class="hover:brand-green transition">Admin</a></li>
+                <h4 class="text-xs font-semibold tracking-widest uppercase text-[#5C9343] mb-6">Corporate Integrity</h4>
+                <ul class="space-y-3 text-sm text-[#F8F9F3]/70">
+                    <li><a class="hover:text-white transition-colors cursor-pointer">Traceability Profiles</a></li>
+                    <li><a class="hover:text-white transition-colors cursor-pointer">Clinical Parameters</a></li>
+                    <li><a class="hover:text-white transition-colors cursor-pointer">Sustainability Directives</a></li>
                 </ul>
             </div>
-
             <div>
-                <h3 class="font-bold brand-green mb-6 text-lg">About Us</h3>
-                <p class="text-muted-brown leading-relaxed">
-                    At Royal Products, we are dedicated to providing the highest quality items 
-                    to help you achieve your fitness and wellness goals.
-                </p>
+                <h4 class="text-xs font-semibold tracking-widest uppercase text-[#5C9343] mb-6">Newsletter Dispatch</h4>
+                <p class="text-sm text-[#F8F9F3]/70 mb-4">Receive priority access to analytical nutritional insights and seasonal crop releases.</p>
+                <div class="flex">
+                    <input type="email" placeholder="Email Address" class="w-full bg-white/5 border border-white/10 px-4 py-3 text-sm text-white rounded-l-lg focus:outline-none focus:border-[#5C9343] transition-colors">
+                    <button class="bg-[#5C9343] hover:bg-[#4a7735] text-white px-6 rounded-r-lg text-sm font-semibold tracking-wider transition-colors">Join</button>
+                </div>
             </div>
         </div>
-
-        <div class="border-t border-gray-200 pt-8 text-center">
-            <p class="text-muted-brown text-sm font-medium">
-                © 2026 Royal Products. All rights reserved.
-            </p>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-white/5 text-center text-xs text-[#F8F9F3]/40 tracking-wider">
+            &copy; 2026 Royal Products International. All architectural validation preserved.
         </div>
     </footer>
 
+    <script>
+        /**
+         * Enterprise Application Database Matrix
+         */
+        const ProductCatalog = [
+            { id: "p1", name: "Karuppu Kavuni Rice", category: "grains", price: 240, description: "Elite, highly nutrient-dense traditional black rice prized by imperial dynasties for deep cellular resilience and profound antioxidant structures.", image: "D:\\rsr\\royal-products-\\royal-products\\assets\\Karupu Kavuni.png", weight: "1 kg", origin: "Thanjavur Ecosystem", micro: "Anthocyanin Complex", protein: "8.5g", carbs: "72g", fiber: "4.2g" },
+            { id: "p2", name: "Oottu Mavu", category: "mixes", price: 320, description: "A multi-generational grain formulation engineered to facilitate long-term muscle architecture maintenance and physical stamina.", image: "D:\\rsr\\royal-products-\\royal-products\\assets\\Ootu Mavu.png", weight: "500g", origin: "Madurai Valley Flats", micro: "Iron & Magnesium Core", protein: "14.2g", carbs: "63g", fiber: "7.1g" },
+            { id: "p3", name: "ABC Malt Powder", category: "elixirs", price: 450, description: "An optimization matrix combining Apple, Beetroot, and Carrot extracts to improve vascular flow, skin appearance, and natural energy levels.", image: "D:\\rsr\\royal-products-\\royal-products\\assets\\ABC malt.png", weight: "400g", origin: "Nilgiri Organic Terraces", micro: "Vitamin A, B9, C Matrix", protein: "4.1g", carbs: "82g", fiber: "5.0g" },
+            { id: "p4", name: "Traditional Health Mix", category: "mixes", price: 380, description: "A balanced macro-blend composed of over 20 unique millets, sprouted grains, and therapeutic nuts tailored for structural family wellness.", image: "D:\\rsr\\royal-products-\\royal-products\\assets\\Traditional Health Mix.png", weight: "1 kg", origin: "Coimbatore Bio-Zone", micro: "Sprouted Enzyme Ensembles", protein: "12.8g", carbs: "68g", fiber: "9.3g" },
+            { id: "p5", name: "Karuppu Kavuni Kali Mix", category: "restorative", price: 290, description: "A highly restorative digestive support blend balancing dynamic gut microfloras and metabolic health pathways via black rice derivatives.", image: "D:\\rsr\\royal-products-\\royal-products\\assets\\karuppu kavuni rice kali kanji mix.png", weight: "500g", origin: "Tirunelveli Plains", micro: "Prebiotic Resistant Starch", protein: "9.1g", carbs: "70g", fiber: "6.4g" },
+            { id: "p6", name: "Karuppu Ulundhu Kali Mix", category: "restorative", price: 310, description: "A potent formulation focusing heavily on skeletal integrity, structural bone density optimization, and joint stabilization layers.", image: "D:\\rsr\\royal-products-\\royal-products\\assets\\Karuppu Ulundhu Kali Kanji Mix.png", weight: "500g", origin: "Salem Organic Corridors", micro: "High-Density Calcium Complex", protein: "22.3g", carbs: "54g", fiber: "11.2g" }
+        ];
+
+        /**
+         * Reactive Global UI State Engine
+         */
+        const AppState = {
+            currentView: 'home',
+            selectedProduct: null,
+            filterCategory: 'all',
+            searchQuery: '',
+            cart: [],
+            isAuthenticated: false,
+            isAdmin: false,
+            userEmail: '',
+            listeners: [],
+            subscribe(callback) { this.listeners.push(callback); },
+            notify() { this.listeners.forEach(cb => cb()); }
+        };
+
+        /**
+         * Navigation Processing & View Transition Controller
+         */
+        const Navigation = {
+            navigate(view, anchorId = null) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                AppState.currentView = view;
+                AppState.notify();
+                
+                if (anchorId) {
+                    setTimeout(() => {
+                        const target = document.getElementById(anchorId);
+                        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                    }, 150);
+                }
+            }
+        };
+
+        /**
+         * Business Operations Asset Injection Controller (Product Upload Processing with FileReader / ObjectURL mapping)
+         */
+        const CorporateProvisioning = {
+            executeInsertion() {
+                const fileInput = document.getElementById('up-img-file');
+                let displayImage = "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80"; 
+
+                // Generate localized system URI hash if binary file exists
+                if (fileInput && fileInput.files && fileInput.files[0]) {
+                    const fileObj = fileInput.files[0];
+                    displayImage = URL.createObjectURL(fileObj);
+                }
+
+                const generatedModule = {
+                    id: "p" + (ProductCatalog.length + 1),
+                    name: document.getElementById('up-name').value,
+                    category: document.getElementById('up-cat').value,
+                    price: parseFloat(document.getElementById('up-price').value),
+                    description: document.getElementById('up-desc').value,
+                    image: displayImage, 
+                    weight: document.getElementById('up-weight').value,
+                    origin: document.getElementById('up-origin').value,
+                    micro: document.getElementById('up-micro').value || "Standard Complex Matrix",
+                    protein: document.getElementById('up-pro').value || "0.0g",
+                    carbs: document.getElementById('up-carbs').value || "0.0g",
+                    fiber: document.getElementById('up-fiber').value || "0.0g"
+                };
+
+                ProductCatalog.push(generatedModule);
+                alert(`SKU node allocation for ${generatedModule.name} appended successfully via local machine resources.`);
+                Navigation.navigate('admin');
+            }
+        };
+
+        /**
+         * Reactive High-Fidelity Shopping Cart Engine
+         */
+        const CartEngine = {
+            toggleDrawer() {
+                const drawer = document.getElementById('cart-drawer');
+                const overlay = document.getElementById('cart-drawer-overlay');
+                drawer.classList.toggle('translate-x-full');
+                overlay.classList.toggle('opacity-0');
+                overlay.classList.toggle('pointer-events-none');
+            },
+            addItem(productId) {
+                const product = ProductCatalog.find(p => p.id === productId);
+                const existing = AppState.cart.find(item => item.id === productId);
+                if (existing) {
+                    existing.quantity += 1;
+                } else {
+                    AppState.cart.push({ ...product, quantity: 1 });
+                }
+                AppState.notify();
+                this.renderDrawerItems();
+                this.flashBadge();
+            },
+            updateQuantity(productId, balance) {
+                const target = AppState.cart.find(item => item.id === productId);
+                if (!target) return;
+                target.quantity += balance;
+                if (target.quantity <= 0) {
+                    AppState.cart = AppState.cart.filter(item => item.id !== productId);
+                }
+                AppState.notify();
+                this.renderDrawerItems();
+            },
+            flashBadge() {
+                const badge = document.getElementById('cart-badge');
+                badge.classList.remove('scale-100');
+                badge.classList.add('scale-125');
+                setTimeout(() => badge.classList.remove('scale-125'), 200);
+            },
+            renderDrawerItems() {
+                const listContainer = document.getElementById('cart-drawer-items');
+                const totalContainer = document.getElementById('cart-drawer-total');
+                const badge = document.getElementById('cart-badge');
+                
+                const totalCount = AppState.cart.reduce((acc, item) => acc + item.quantity, 0);
+                if (totalCount > 0) {
+                    badge.textContent = totalCount;
+                    badge.classList.remove('opacity-0');
+                } else {
+                    badge.classList.add('opacity-0');
+                }
+
+                if (AppState.cart.length === 0) {
+                    listContainer.innerHTML = `
+                        <div class="h-64 flex flex-col items-center justify-center text-center space-y-4">
+                            <svg class="w-12 h-12 text-[#8B735B]/40" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/></svg>
+                            <p class="text-sm font-medium tracking-wide text-[#8B735B]">Your collection vault is vacant.</p>
+                        </div>`;
+                    totalContainer.textContent = "₹0.00";
+                    return;
+                }
+
+                let itemsHtml = '';
+                let aggregateSum = 0;
+                
+                AppState.cart.forEach(item => {
+                    const costVal = item.price * item.quantity;
+                    aggregateSum += costVal;
+                    itemsHtml += `
+                        <div class="flex items-center space-x-4 bg-white p-4 rounded-xl border border-[#8B735B]/5 shadow-sm transition-all duration-300">
+                            <img src="${item.image}" alt="${item.name}" class="w-16 h-16 object-cover rounded-lg bg-[#F8F9F3]">
+                            <div class="flex-1">
+                                <h4 class="text-sm font-semibold text-[#1C2316] line-clamp-1">${item.name}</h4>
+                                <p class="text-xs text-[#8B735B] mb-2">${item.weight}</p>
+                                <div class="flex items-center space-x-3">
+                                    <button onclick="CartEngine.updateQuantity('${item.id}', -1)" class="w-6 h-6 rounded-full border border-[#8B735B]/20 flex items-center justify-center text-xs hover:bg-[#8B735B]/10 active:scale-90 transition-all">-</button>
+                                    <span class="text-xs font-semibold text-[#1C2316] w-4 text-center">${item.quantity}</span>
+                                    <button onclick="CartEngine.updateQuantity('${item.id}', 1)" class="w-6 h-6 rounded-full border border-[#8B735B]/20 flex items-center justify-center text-xs hover:bg-[#8B735B]/10 active:scale-90 transition-all">+</button>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <span class="text-sm font-bold text-[#1C2316]">₹${costVal}</span>
+                            </div>
+                        </div>`;
+                });
+                listContainer.innerHTML = itemsHtml;
+                totalContainer.textContent = `₹${aggregateSum.toLocaleString('en-IN')}.00`;
+            },
+            triggerCheckout() {
+                if (AppState.cart.length === 0) return alert("NO ITEMS IN CART.");
+                this.toggleDrawer();
+                Navigation.navigate('payment');
+            }
+        };
+
+        /**
+         * Comprehensive Page View Component Engine Template Layouts
+         */
+        const ComponentViews = {
+            home() {
+                return `
+                    <section class="relative min-h-[85vh] bg-gradient-to-br from-[#F8F9F3] via-[#F3F5EC] to-[#EBEFE2] flex items-center overflow-hidden py-16">
+                        <div class="absolute inset-0 opacity-40">
+                            <div class="absolute top-1/4 left-10 w-96 h-96 bg-[#5C9343]/10 rounded-full filter blur-[80px] animate-pulse"></div>
+                            <div class="absolute bottom-1/4 right-10 w-[450px] h-[450px] bg-[#8B735B]/10 rounded-full filter blur-[100px] animate-pulse" style="animation-delay: 2s"></div>
+                        </div>
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                            <div class="lg:col-span-7 space-y-8 animate-fade-in-up">
+                                <div class="inline-flex items-center space-x-2 bg-white/60 backdrop-blur-md px-4 py-2 rounded-full border border-[#8B735B]/10 text-xs tracking-widest uppercase font-semibold text-[#8B735B]">
+                                    <span>✦ Traditional Tamil Bio-Nutrition ✦</span>
+                                </div>
+                                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-[#1C2316] leading-[1.1]">
+                                    Get <span class="text-[#5C9343] font-serif italic font-normal">Fit</span> <br>         Feel <span class="text-[#5C9343] font-serif italic font-normal">great</span>
+                                </h1>
+                                <p class="text-base sm:text-lg text-[#8B735B] max-w-xl leading-relaxed font-light">
+                                    Re-engineering historic metabolic assets including Karuppu Kavuni and complex botanical malts for high-performance functional cellular health.
+                                </p>
+                                <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+                                    <button onclick="Navigation.navigate('shop')" class="bg-[#5C9343] hover:bg-[#4a7735] text-white text-xs tracking-widest uppercase font-bold py-5 px-10 rounded-xl transition-all shadow-lg hover:shadow-xl shadow-[#5C9343]/20 active:scale-[0.98]">Acquire Collection</button>
+                                    <button onclick="Navigation.navigate('home', 'benefits-section')" class="bg-white hover:bg-gray-50 border border-[#8B735B]/20 text-[#1C2316] text-xs tracking-widest uppercase font-bold py-5 px-10 rounded-xl transition-all shadow-sm active:scale-[0.98]">Our Scientific Creed</button>
+                                </div>
+                            </div>
+                            <div class="lg:col-span-5 relative animate-fade-in-up" style="animation-delay: 0.2s">
+                                <div class="aspect-square w-full rounded-3xl overflow-hidden shadow-[0_50px_100px_rgba(0,0,0,0.06)] bg-white p-4 border border-[#8B735B]/10">
+                                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1000&q=80" alt="Premium Clean Botanical Formulations" class="w-full h-full object-cover rounded-2xl transform hover:scale-105 transition-transform duration-700">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="border-y border-[#8B735B]/10 bg-white/60 premium-blur py-10">
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                            <div class="space-y-1">
+                                <p class="text-xs uppercase tracking-widest text-[#8B735B] font-bold">Traceability</p>
+                                <p class="text-sm font-semibold text-[#1C2316]">100% Certified Organic</p>
+                            </div>
+                            <div class="space-y-1">
+                                <p class="text-xs uppercase tracking-widest text-[#8B735B] font-bold">Formulation</p>
+                                <p class="text-sm font-semibold text-[#1C2316]">Zero Synthetic Fillers</p>
+                            </div>
+                            <div class="space-y-1">
+                                <p class="text-xs uppercase tracking-widest text-[#8B735B] font-bold">Extraction</p>
+                                <p class="text-sm font-semibold text-[#1C2316]">Traditional Cold Processing</p>
+                            </div>
+                            <div class="space-y-1">
+                                <p class="text-xs uppercase tracking-widest text-[#8B735B] font-bold">Distribution</p>
+                                <p class="text-sm font-semibold text-[#1C2316]">Secure Controlled Logistics</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <div class="flex flex-col md:flex-row justify-between items-baseline mb-16 space-y-4">
+                            <div>
+                                <h2 class="text-xs uppercase tracking-widest text-[#5C9343] font-bold mb-3">Product Portfolio Architecture</h2>
+                                <p class="text-3xl font-extrabold text-[#1C2316] tracking-tight">Select Functional Categorizations</p>
+                            </div>
+                            <a onclick="Navigation.navigate('shop')" class="text-sm font-bold text-[#8B735B] hover:text-[#5C9343] transition-colors flex items-center space-x-2 group cursor-pointer">
+                                <span>Browse Master Directory</span>
+                                <span class="transform group-hover:translate-x-1 transition-transform">→</span>
+                            </a>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                            <div onclick="AppState.filterCategory='grains'; Navigation.navigate('shop');" class="group relative h-96 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 bg-white border border-[#8B735B]/10 p-6 flex flex-col justify-end cursor-pointer">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?auto=format&fit=crop&w=600&q=80" alt="Grains" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div class="relative z-20 text-white space-y-2">
+                                    <span class="text-[10px] tracking-widest uppercase font-bold text-[#5C9343]">Category 01</span>
+                                    <h3 class="text-xl font-bold tracking-tight">Imperial Ancient Grains</h3>
+                                    <p class="text-xs text-gray-300 font-light line-clamp-2">Pure native variations structured for deep mineral delivery frameworks.</p>
+                                </div>
+                            </div>
+                            <div onclick="AppState.filterCategory='elixirs'; Navigation.navigate('shop');" class="group relative h-96 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 bg-white border border-[#8B735B]/10 p-6 flex flex-col justify-end cursor-pointer">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?auto=format&fit=crop&w=600&q=80" alt="Malt Extracts" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div class="relative z-20 text-white space-y-2">
+                                    <span class="text-[10px] tracking-widest uppercase font-bold text-[#5C9343]">Category 02</span>
+                                    <h3 class="text-xl font-bold tracking-tight">Active Botanical Elixirs</h3>
+                                    <p class="text-xs text-gray-300 font-light line-clamp-2">Bio-available fluid amplifications targeting core vascular energy vectors.</p>
+                                </div>
+                            </div>
+                            <div onclick="AppState.filterCategory='mixes'; Navigation.navigate('shop');" class="group relative h-96 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 bg-white border border-[#8B735B]/10 p-6 flex flex-col justify-end cursor-pointer">
+                                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
+                                <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=600&q=80" alt="Sprouted Blends" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <div class="relative z-20 text-white space-y-2">
+                                    <span class="text-[10px] tracking-widest uppercase font-bold text-[#5C9343]">Category 03</span>
+                                    <h3 class="text-xl font-bold tracking-tight">Nutrient Dense Formulations</h3>
+                                    <p class="text-xs text-gray-300 font-light line-clamp-2">Over twenty distinct macro-grains configured symmetrically to sustain physical integrity.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="bg-[#1C2316] text-white py-24 my-12 relative overflow-hidden">
+                        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#5C9343_1px,transparent_1px)] [background-size:16px_16px]"></div>
+                        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+                            <div class="lg:col-span-5 space-y-4">
+                                <span class="text-xs tracking-widest uppercase font-bold text-[#5C9343]">Analytical Verification</span>
+                                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Efficacy Mapped In Real Metrics</h2>
+                                <p class="text-sm text-gray-400 font-light leading-relaxed">Our production architectures reject ambiguity. We track precise bio-performance changes within our active wellness cohorts.</p>
+                            </div>
+                            <div class="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-8">
+                                <div class="bg-white/5 border border-white/10 rounded-2xl p-8 space-y-2 text-center">
+                                    <p class="text-4xl font-serif font-bold text-[#5C9343] tracking-tight">94%</p>
+                                    <p class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Digestive Biomarker Balance</p>
+                                </div>
+                                <div class="bg-white/5 border border-white/10 rounded-2xl p-8 space-y-2 text-center">
+                                    <p class="text-4xl font-serif font-bold text-[#5C9343] tracking-tight">2.4x</p>
+                                    <p class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Sustained Glycemic Stability</p>
+                                </div>
+                                <div class="bg-white/5 border border-white/10 rounded-2xl p-8 space-y-2 text-center">
+                                    <p class="text-4xl font-serif font-bold text-[#5C9343] tracking-tight">18k+</p>
+                                    <p class="text-xs uppercase tracking-wider text-gray-400 font-semibold">Active Families Restored</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="benefits-section" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center scroll-mt-24">
+                        <div class="space-y-8">
+                            <div>
+                                <span class="text-xs uppercase tracking-widest text-[#5C9343] font-bold mb-3 block">Wellness Blueprint</span>
+                                <h2 class="text-4xl font-extrabold text-[#1C2316] tracking-tight">The Extraction Philosophy Behind Our Bio-Nutrition</h2>
+                            </div>
+                            <div class="space-y-6">
+                                <div class="flex space-x-4">
+                                    <div class="w-10 h-10 rounded-xl bg-[#5C9343]/10 flex items-center justify-center text-[#5C9343] font-bold shrink-0 text-sm">1</div>
+                                    <div>
+                                        <h4 class="text-base font-bold text-[#1C2316] mb-1">Preservation of Indigenous Phytonutrition</h4>
+                                        <p class="text-sm text-[#8B735B] font-light leading-relaxed">Standardized commercial manufacturing speeds burn trace structures. Our low-heat extraction sequence guards the foundational enzyme chains cleanly.</p>
+                                    </div>
+                                </div>
+                                <div class="flex space-x-4">
+                                    <div class="w-10 h-10 rounded-xl bg-[#5C9343]/10 flex items-center justify-center text-[#5C9343] font-bold shrink-0 text-sm">2</div>
+                                    <div>
+                                        <h4 class="text-base font-bold text-[#1C2316] mb-1">Optimized Glycemic Control Matrix</h4>
+                                        <p class="text-sm text-[#8B735B] font-light leading-relaxed">By prioritizing highly structured, slow-release unrefined carbohydrates, our blends prevent immediate insulin spikes, maintaining sustained baseline vitality values.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-gradient-to-tr from-[#8B735B]/10 to-[#5C9343]/10 rounded-3xl p-8 border border-[#8B735B]/5">
+                            <blockquote class="text-xl font-serif italic text-[#1C2316] leading-relaxed mb-6">"Traditional Tamil nutrition systems were designed to preserve complex cellular paths. Royal Products honors this heritage by executing processing models engineered to medicinal-grade food criteria."</blockquote>
+                            <p class="text-xs font-bold uppercase tracking-widest text-[#8B735B]">Dr. A. Arunkumar, Ph.D. <br><span class="font-normal normal-case text-gray-500">Principal Nutritional Anthropologist</span></p>
+                        </div>
+                    </section>
+                `;
+            },
+            shop() {
+                let itemsHtml = '';
+                const activeFilters = ProductCatalog.filter(p => {
+                    const matchCat = AppState.filterCategory === 'all' || p.category === AppState.filterCategory;
+                    const matchSearch = p.name.toLowerCase().includes(AppState.searchQuery.toLowerCase());
+                    return matchCat && matchSearch;
+                });
+
+                if (activeFilters.length === 0) {
+                    itemsHtml = `
+                        <div class="col-span-full h-96 flex flex-col items-center justify-center text-center space-y-4 bg-white rounded-2xl border border-[#8B735B]/10">
+                            <p class="text-base font-semibold text-[#1C2316]">No matching assets resolved inside current query parameters.</p>
+                            <button onclick="AppState.filterCategory='all'; AppState.searchQuery=''; AppState.notify();" class="text-xs font-bold text-[#5C9343] uppercase tracking-wider underline">Clear Query Parameters</button>
+                        </div>`;
+                } else {
+                    activeFilters.forEach(product => {
+                        itemsHtml += `
+                            <div class="group bg-white rounded-2xl border border-[#8B735B]/10 shadow-sm hover:shadow-[0_30px_60px_rgba(0,0,0,0.04)] -translate-y-0 hover:-translate-y-2 transition-all duration-500 flex flex-col overflow-hidden">
+                                <div class="relative overflow-hidden aspect-square bg-[#F8F9F3] p-4 cursor-pointer" onclick="AppState.selectedProduct='${product.id}'; Navigation.navigate('detail');">
+                                    <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-700">
+                                    <span class="absolute top-4 left-4 bg-[#1C2316] text-white text-[9px] tracking-widest uppercase font-bold px-3 py-1.5 rounded-full shadow-sm">${product.weight}</span>
+                                </div>
+                                <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                                    <div class="space-y-1">
+                                        <p class="text-[10px] tracking-widest uppercase font-bold text-[#8B735B]/60">${product.category}</p>
+                                        <h3 class="text-base font-bold text-[#1C2316] line-clamp-1 cursor-pointer hover:text-[#5C9343] transition-colors" onclick="AppState.selectedProduct='${product.id}'; Navigation.navigate('detail');">${product.name}</h3>
+                                        <p class="text-xs text-[#8B735B] line-clamp-2 font-light leading-relaxed">${product.description}</p>
+                                    </div>
+                                    <div class="pt-2 flex items-center justify-between border-t border-[#8B735B]/5">
+                                        <span class="text-base font-extrabold text-[#1C2316]">₹${product.price}.00</span>
+                                        <button onclick="CartEngine.addItem('${product.id}')" class="bg-[#5C9343] hover:bg-[#4a7735] text-white text-[10px] tracking-widest uppercase font-bold py-2.5 px-4 rounded-lg transition-all active:scale-95 shadow-sm">Allocate</button>
+                                    </div>
+                                </div>
+                            </div>`;
+                    });
+                }
+
+                const catBtnClass = (cat) => AppState.filterCategory === cat 
+                    ? 'bg-[#5C9343] text-white shadow-md' 
+                    : 'bg-white text-[#1C2316] border border-[#8B735B]/10 hover:bg-gray-50';
+
+                return `
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-6 md:space-y-0 mb-12 pb-8 border-b border-[#8B735B]/10">
+                            <div>
+                                <h1 class="text-3xl font-extrabold tracking-tight text-[#1C2316]">Master Provisioning Catalog</h1>
+                                <p class="text-xs text-[#8B735B] mt-1 font-light">Deploy fine-grained classification arrays to locate your target microelements.</p>
+                            </div>
+                            <div class="w-full md:w-80 relative">
+                                <input type="text" id="shop-search" value="${AppState.searchQuery}" placeholder="Search product portfolio..." class="w-full bg-white border border-[#8B735B]/20 text-sm rounded-xl px-5 py-3.5 pr-12 focus:outline-none focus:border-[#5C9343] transition-all placeholder:text-gray-400">
+                                <svg class="w-5 h-5 text-[#8B735B] absolute right-4 top-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-4 gap-12 items-start">
+                            <div class="lg:sticky lg:top-28 space-y-6">
+                                <p class="text-xs font-bold uppercase tracking-widest text-[#8B735B] mb-2">Category Configurations</p>
+                                <div class="flex flex-row lg:flex-col gap-2 overflow-x-auto pb-4 lg:pb-0 scrollbar-none">
+                                    <button onclick="AppState.filterCategory='all'; AppState.notify();" class="whitespace-nowrap px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all text-left ${catBtnClass('all')}">All Functional Matrix</button>
+                                    <button onclick="AppState.filterCategory='grains'; AppState.notify();" class="whitespace-nowrap px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all text-left ${catBtnClass('grains')}">Imperial Grains</button>
+                                    <button onclick="AppState.filterCategory='mixes'; AppState.notify();" class="whitespace-nowrap px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all text-left ${catBtnClass('mixes')}">Sprouted Blends</button>
+                                    <button onclick="AppState.filterCategory='elixirs'; AppState.notify();" class="whitespace-nowrap px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all text-left ${catBtnClass('elixirs')}">Active Elixirs</button>
+                                    <button onclick="AppState.filterCategory='restorative'; AppState.notify();" class="whitespace-nowrap px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all text-left ${catBtnClass('restorative')}">Restorative Mixes</button>
+                                </div>
+                            </div>
+
+                            <div class="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                                ${itemsHtml}
+                            </div>
+                        </div>
+                    </div>
+                `;
+            },
+            detail() {
+                const product = ProductCatalog.find(p => p.id === AppState.selectedProduct) || ProductCatalog[0];
+                return `
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                        <button onclick="Navigation.navigate('shop')" class="inline-flex items-center space-x-2 text-xs font-bold uppercase tracking-widest text-[#8B735B] hover:text-[#5C9343] mb-12 transition-colors">
+                            <span>← Return To Active Pipeline</span>
+                        </button>
+
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                            <div class="lg:col-span-6 space-y-6">
+                                <div class="aspect-square bg-white border border-[#8B735B]/10 p-6 rounded-3xl shadow-sm overflow-hidden">
+                                    <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover rounded-2xl transform hover:scale-102 transition-transform duration-500">
+                                </div>
+                            </div>
+
+                            <div class="lg:col-span-6 space-y-8">
+                                <div class="space-y-2">
+                                    <span class="text-[10px] tracking-widest uppercase font-bold text-[#5C9343] bg-[#5C9343]/10 px-3 py-1 rounded-md">${product.origin}</span>
+                                    <h1 class="text-4xl font-extrabold tracking-tight text-[#1C2316] pt-2">${product.name}</h1>
+                                    <p class="text-lg font-bold text-[#8B735B]">${product.weight} Net Volume Unit</p>
+                                </div>
+                                
+                                <p class="text-sm text-[#8B735B] font-light leading-relaxed">${product.description}</p>
+                                
+                                <div class="bg-white border border-[#8B735B]/10 rounded-2xl p-6 space-y-4 shadow-sm">
+                                    <p class="text-xs font-bold uppercase tracking-widest text-[#1C2316]">Phytonutritional Analytics (Per 100g Cluster)</p>
+                                    <div class="grid grid-cols-2 gap-4 text-xs">
+                                        <div class="bg-[#F8F9F3] p-3 rounded-xl"><span class="block text-gray-500 font-light">Bio-Available Protein</span><strong class="text-sm font-bold text-[#1C2316]">${product.protein}</strong></div>
+                                        <div class="bg-[#F8F9F3] p-3 rounded-xl"><span class="block text-gray-500 font-light">Total Carbohydrates</span><strong class="text-sm font-bold text-[#1C2316]">${product.carbs}</strong></div>
+                                        <div class="bg-[#F8F9F3] p-3 rounded-xl"><span class="block text-gray-500 font-light">Dietary Plant Fiber</span><strong class="text-sm font-bold text-[#1C2316]">${product.fiber}</strong></div>
+                                        <div class="bg-[#F8F9F3] p-3 rounded-xl"><span class="block text-gray-500 font-light">Target Microelement</span><strong class="text-sm font-bold text-[#1C2316] line-clamp-1">${product.micro}</strong></div>
+                                    </div>
+                                </div>
+
+                                <div class="pt-4 flex items-center space-x-4">
+                                    <button onclick="CartEngine.addItem('${product.id}')" class="flex-1 bg-[#5C9343] hover:bg-[#4a7735] text-white text-xs tracking-widest uppercase font-bold py-5 px-8 rounded-xl transition-all shadow-md active:scale-[0.99]">Incorporate Into Active Allocation</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            },
+            login() {
+                return `
+                    <div class="max-w-md mx-auto px-4 py-24">
+                        <div class="bg-white rounded-3xl border border-[#8B735B]/10 p-8 shadow-sm space-y-8 animate-fade-in-up">
+                            <div class="text-center space-y-2">
+                                <span class="text-[10px] tracking-widest uppercase font-bold text-[#5C9343]">Identity Vault</span>
+                                <h2 class="text-2xl font-extrabold tracking-tight text-[#1C2316]">Access Royal Profile</h2>
+                                <p class="text-xs text-[#8B735B] font-light">Unlock priority tracking and continuous trace history parameters.</p>
+                            </div>
+                            
+                            <form id="auth-form-matrix" class="space-y-5">
+                                <div class="space-y-1">
+                                    <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">Authorized Email Address</label>
+                                    <input type="email" id="auth-email" required placeholder="name@domain.com" class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-xl p-3.5 text-xs focus:outline-none focus:border-[#5C9343] transition-colors">
+                                    <p class="text-[9px] text-amber-700 font-medium tracking-wide mt-1">✦ Input 'admin@royal.com' to directly unlock structural administrative dashboard options.</p>
+                                </div>
+                                <div class="space-y-1">
+                                    <div class="flex justify-between items-center">
+                                        <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">Account Security Password</label>
+                                        <a class="text-[10px] font-medium text-[#5C9343] hover:underline cursor-pointer">Recover Key?</a>
+                                    </div>
+                                    <input type="password" required placeholder="••••••••••••" class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-xl p-3.5 text-xs focus:outline-none focus:border-[#5C9343] transition-colors">
+                                </div>
+                                
+                                <button type="submit" class="w-full bg-[#5C9343] hover:bg-[#4a7735] text-white text-xs tracking-widest uppercase font-bold py-4 rounded-xl transition-all shadow-md active:scale-[0.99]">Authenticate Gateway Identity</button>
+                            </form>
+
+                            <div class="relative flex py-2 items-center">
+                                <div class="flex-grow border-t border-[#8B735B]/10"></div>
+                                <span class="flex-shrink mx-4 text-[10px] uppercase tracking-widest text-[#8B735B]/40 font-bold">New Registrations</span>
+                                <div class="flex-grow border-t border-[#8B735B]/10"></div>
+                            </div>
+
+                            <button onclick="alert('Client database infrastructure currently closed to seasonal beta allocations.');" class="w-full bg-transparent hover:bg-gray-50 border border-[#8B735B]/20 text-[#1C2316] text-xs tracking-widest uppercase font-bold py-4 rounded-xl transition-all active:scale-[0.99]">Create Credentials Registry</button>
+                        </div>
+                    </div>
+                `;
+            },
+            payment() {
+                let aggregateSum = AppState.cart.reduce((acc, item) => acc + (item.price * item.quantity), 0);
+                return `
+                    <div class="max-w-4xl mx-auto px-4 py-20">
+                        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+                            <div class="lg:col-span-7 bg-white p-8 rounded-3xl border border-[#8B735B]/10 space-y-8 shadow-sm">
+                                <div class="space-y-1">
+                                    <span class="text-[10px] tracking-widest uppercase font-bold text-[#5C9343]">Secure Checkout</span>
+                                    <h2 class="text-xl font-extrabold text-[#1C2316]">Settlement Vector Authorization</h2>
+                                </div>
+
+                                <div class="grid grid-cols-3 gap-3">
+                                    <div class="border-2 border-[#5C9343] bg-[#5C9343]/5 rounded-xl p-4 text-center cursor-pointer transition-all">
+                                        <span class="block text-xs font-bold text-[#1C2316]">Payment Card</span>
+                                    </div>
+                                    <div onclick="alert('Unified Payments Interface terminal activated.')" class="border border-[#8B735B]/10 hover:border-[#5C9343]/40 rounded-xl p-4 text-center cursor-pointer transition-all">
+                                        <span class="block text-xs font-bold text-[#8B735B]">UPI / QR</span>
+                                    </div>
+                                    <div onclick="alert('Corporate Netbanking system node linked.')" class="border border-[#8B735B]/10 hover:border-[#5C9343]/40 rounded-xl p-4 text-center cursor-pointer transition-all">
+                                        <span class="block text-xs font-bold text-[#8B735B]">NetBanking</span>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-4 pt-2">
+                                    <div class="space-y-1">
+                                        <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">Cardholders Full Name</label>
+                                        <input type="text" required placeholder="Gohul" class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-lg p-3 text-xs focus:outline-none focus:border-[#5C9343]">
+                                    </div>
+                                    <div class="space-y-1">
+                                        <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">Card Identification Sequence</label>
+                                        <div class="relative">
+                                            <input type="text" required placeholder="4321 •••• •••• 9876" class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-lg p-3 pr-10 text-xs focus:outline-none focus:border-[#5C9343]">
+                                            <svg class="w-4 h-4 text-gray-400 absolute right-3 top-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+                                        </div>
+                                    </div>
+                                    <div class="grid grid-cols-2 gap-4">
+                                        <div class="space-y-1">
+                                            <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">Expiration Matrix</label>
+                                            <input type="text" required placeholder="MM / YY" class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-lg p-3 text-xs focus:outline-none focus:border-[#5C9343]">
+                                        </div>
+                                        <div class="space-y-1">
+                                            <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">Card Verification Value (CVV)</label>
+                                            <input type="password" required placeholder="•••" class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-lg p-3 text-xs focus:outline-none focus:border-[#5C9343]">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button onclick="alert('Transaction verified. Secure token authorized.'); AppState.cart=[]; Navigation.navigate('home');" class="w-full bg-[#5C9343] hover:bg-[#4a7735] text-white text-xs tracking-widest uppercase font-bold py-4 rounded-xl transition-all shadow-md">Execute Remittance Protocol (₹${aggregateSum.toLocaleString('en-IN')}.00)</button>
+                            </div>
+
+                            <div class="lg:col-span-5 bg-[#8B735B]/5 border border-[#8B735B]/10 rounded-3xl p-6 space-y-4">
+                                <h3 class="text-xs font-bold uppercase tracking-widest text-[#1C2316]">Settlement Asset Manifest</h3>
+                                <div class="space-y-2 text-xs border-b border-[#8B735B]/10 pb-4">
+                                    <div class="flex justify-between"><span class="text-gray-500 font-light">Subtotal Allocation</span><span class="font-bold">₹${aggregateSum}</span></div>
+                                    <div class="flex justify-between"><span class="text-gray-500 font-light">Secure Express Distribution</span><span class="font-bold text-emerald-600">Complimentary</span></div>
+                                    <div class="flex justify-between"><span class="text-gray-500 font-light">Tax Evaluation</span><span class="font-bold">₹0.00</span></div>
+                                </div>
+                                <div class="flex justify-between items-center text-sm font-bold text-[#1C2316]">
+                                    <span>Aggregated Total Valuation</span>
+                                    <span>₹${aggregateSum.toLocaleString('en-IN')}.00</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            },
+            admin() {
+                return `
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                        <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-4 md:space-y-0 mb-12 pb-6 border-b border-[#8B735B]/10">
+                            <div>
+                                <h1 class="text-3xl font-extrabold tracking-tight text-[#1C2316]">Operations Control Matrix</h1>
+                                <p class="text-xs text-[#8B735B] mt-1 font-light">Track logistics flows, active warehouse metrics, and structural configuration data updates.</p>
+                            </div>
+                            <button onclick="Navigation.navigate('upload')" class="bg-[#5C9343] hover:bg-[#4a7735] text-white text-[11px] tracking-widest uppercase font-bold py-3.5 px-6 rounded-xl transition-all shadow-sm">Inject New Database SKU</button>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                            <div class="bg-white p-6 rounded-2xl border border-[#8B735B]/10 shadow-sm space-y-2">
+                                <p class="text-xs uppercase tracking-wider text-[#8B735B] font-bold">Gross Capital Settled</p>
+                                <p class="text-3xl font-bold tracking-tight text-[#1C2316]">₹14,82,400</p>
+                                <span class="text-[10px] text-emerald-600 font-semibold">↑ 18.2% variance in session</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl border border-[#8B735B]/10 shadow-sm space-y-2">
+                                <p class="text-xs uppercase tracking-wider text-[#8B735B] font-bold">Logistics Dispatches</p>
+                                <p class="text-3xl font-bold tracking-tight text-[#1C2316]">3,240 Units</p>
+                                <span class="text-[10px] text-emerald-600 font-semibold">100% telemetry handshakes</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl border border-[#8B735B]/10 shadow-sm space-y-2">
+                                <p class="text-xs uppercase tracking-wider text-[#8B735B] font-bold">Active Warehouse Catalog Matrix</p>
+                                <p class="text-3xl font-bold tracking-tight text-[#1C2316]">${ProductCatalog.length} SKUs Active</p>
+                                <span class="text-[10px] text-[#8B735B] font-medium">All components fully functional</span>
+                            </div>
+                            <div class="bg-white p-6 rounded-2xl border border-[#8B735B]/10 shadow-sm space-y-2">
+                                <p class="text-xs uppercase tracking-wider text-[#8B735B] font-bold">Edge API Compute Health</p>
+                                <p class="text-3xl font-bold tracking-tight text-[#1C2316]">0.04s Response</p>
+                                <span class="text-[10px] text-emerald-600 font-semibold">Nodes running at peak precision</span>
+                            </div>
+                        </div>
+
+                        <div class="bg-white border border-[#8B735B]/10 rounded-2xl shadow-sm overflow-hidden">
+                            <div class="p-6 border-b border-[#8B735B]/5 bg-[#F8F9F3]/40">
+                                <h3 class="text-xs font-bold uppercase tracking-widest text-[#1C2316]">Active Deployment Register</h3>
+                            </div>
+                            <div class="overflow-x-auto">
+                                <table class="w-full text-left border-collapse text-xs">
+                                    <thead>
+                                        <tr class="border-b border-[#8B735B]/10 text-[#8B735B] uppercase tracking-wider font-bold bg-gray-50/50">
+                                            <th class="p-4">SKU Product Asset Name</th>
+                                            <th class="p-4">Structural Classification</th>
+                                            <th class="p-4">Base Pricing Valuation</th>
+                                            <th class="p-4">Capacity Status</th>
+                                            <th class="p-4 text-right">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="divide-y divide-gray-100 font-medium text-[#1C2316]">
+                                        ${ProductCatalog.map(p => `
+                                            <tr class="hover:bg-[#F8F9F3]/50 transition-colors">
+                                                <td class="p-4 font-bold text-sm">${p.name}</td>
+                                                <td class="p-4 text-gray-500 uppercase tracking-wide text-[10px]">${p.category}</td>
+                                                <td class="p-4 font-semibold">₹${p.price}.00</td>
+                                                <td class="p-4">
+                                                    <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">Optimized Deployment</span>
+                                                </td>
+                                                <td class="p-4 text-right">
+                                                    <button class="text-[#5C9343] hover:underline font-bold mr-3" onclick="alert('Asset modifications locked inside core template context views.')">Modify</button>
+                                                    <button class="text-red-600 hover:underline font-bold" onclick="alert('Decommission logic requires full master configuration permission layers.')">Decommission</button>
+                                                </td>
+                                            </tr>
+                                        `).join('')}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            },
+            upload() {
+                return `
+                    <div class="max-w-3xl mx-auto px-4 py-20">
+                        <div class="bg-white rounded-3xl border border-[#8B735B]/10 p-8 shadow-sm space-y-8 animate-fade-in-up">
+                            <div class="flex justify-between items-start border-b border-[#8B735B]/5 pb-6">
+                                <div>
+                                    <span class="text-[10px] tracking-widest uppercase font-bold text-[#5C9343]">Asset Matrix Injector</span>
+                                    <h2 class="text-2xl font-extrabold tracking-tight text-[#1C2316]">Provision New SKU Entry</h2>
+                                </div>
+                                <button onclick="Navigation.navigate('admin')" class="text-xs font-bold text-[#8B735B] hover:text-[#1C2316] transition-colors uppercase tracking-wider">Cancel Insertion</button>
+                            </div>
+
+                            <form id="product-upload-form" class="space-y-6">
+                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                    <div class="space-y-1">
+                                        <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">Product Display Name</label>
+                                        <input type="text" id="up-name" required placeholder="e.g., Organic Kavuni Flour" class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-lg p-3 text-xs focus:outline-none focus:border-[#5C9343]">
+                                    </div>
+                                    <div class="space-y-1">
+                                        <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">Taxonomy Classification Group</label>
+                                        <select id="up-cat" class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-lg p-3 text-xs focus:outline-none focus:border-[#5C9343]">
+                                            <option value="grains">Imperial Ancient Grains</option>
+                                            <option value="mixes">Nutrient Dense Formulations</option>
+                                            <option value="elixirs">Active Botanical Elixirs</option>
+                                            <option value="restorative">Restorative Systems</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                                    <div class="space-y-1">
+                                        <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">Pricing Valuation Base (₹)</label>
+                                        <input type="number" id="up-price" required placeholder="350" class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-lg p-3 text-xs focus:outline-none focus:border-[#5C9343]">
+                                    </div>
+                                    <div class="space-y-1">
+                                        <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">Net Volumetric Unit Mass</label>
+                                        <input type="text" id="up-weight" required placeholder="e.g., 500g or 1 kg" class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-lg p-3 text-xs focus:outline-none focus:border-[#5C9343]">
+                                    </div>
+                                    <div class="space-y-1">
+                                        <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">Geographical Trace Origin</label>
+                                        <input type="text" id="up-origin" required placeholder="Thanjavur Ecosystem Flats" class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-lg p-3 text-xs focus:outline-none focus:border-[#5C9343]">
+                                    </div>
+                                </div>
+
+                                <div class="space-y-1">
+                                    <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">Corporate Product Strategy Description</label>
+                                    <textarea id="up-desc" rows="3" required placeholder="Detail microelement asset profiles, metabolic synchronization paths, and lineage analysis configurations..." class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-lg p-3 text-xs focus:outline-none focus:border-[#5C9343]"></textarea>
+                                </div>
+
+                                <div class="space-y-1">
+                                    <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">Upload Local Product Image Asset</label>
+                                    <input type="file" id="up-img-file" accept="image/*" required class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-lg p-3 text-xs file:mr-4 file:py-1 file:px-3 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-[#5C9343] file:text-white hover:file:bg-[#4a7735] focus:outline-none">
+                                </div>
+
+                                <div class="bg-[#F8F9F3] p-6 rounded-2xl border border-[#8B735B]/10 space-y-4">
+                                    <p class="text-xs font-bold uppercase tracking-widest text-[#1C2316]">Analytical Laboratory Parameters (Per 100g Target Matrix)</p>
+                                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                                        <div class="space-y-1">
+                                            <label class="text-[9px] uppercase tracking-wider font-bold text-gray-500">Protein Base</label>
+                                            <input type="text" id="up-pro" placeholder="12.5g" class="w-full bg-white border border-[#8B735B]/10 rounded-lg p-2.5 text-xs">
+                                        </div>
+                                        <div class="space-y-1">
+                                            <label class="text-[9px] uppercase tracking-wider font-bold text-gray-500">Total Carbs</label>
+                                            <input type="text" id="up-carbs" placeholder="65g" class="w-full bg-white border border-[#8B735B]/10 rounded-lg p-2.5 text-xs">
+                                        </div>
+                                        <div class="space-y-1">
+                                            <label class="text-[9px] uppercase tracking-wider font-bold text-gray-500">Dietary Plant Fiber</label>
+                                            <input type="text" id="up-fiber" placeholder="8.2g" class="w-full bg-white border border-[#8B735B]/10 rounded-lg p-2.5 text-xs">
+                                        </div>
+                                        <div class="space-y-1">
+                                            <label class="text-[9px] uppercase tracking-wider font-bold text-gray-500">Target Microelement</label>
+                                            <input type="text" id="up-micro" placeholder="Iron Complex" class="w-full bg-white border border-[#8B735B]/10 rounded-lg p-2.5 text-xs">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <button type="submit" class="w-full bg-[#5C9343] hover:bg-[#4a7735] text-white text-xs tracking-widest uppercase font-bold py-4 rounded-xl transition-all shadow-md">Deploy SKU Node into Production Framework</button>
+                            </form>
+                        </div>
+                    </div>
+                `;
+            }
+        };
+
+        /**
+         * Core Application Lifecycle Pipeline Controller
+         */
+        const AppCore = {
+            init() {
+                AppState.subscribe(() => this.renderActiveView());
+                this.renderActiveView();
+                CartEngine.renderDrawerItems();
+            },
+            renderActiveView() {
+                const targetContainer = document.getElementById('app-view-container');
+                targetContainer.innerHTML = ComponentViews[AppState.currentView]();
+                
+                const adminLink = document.getElementById('admin-nav-link');
+                if (AppState.isAdmin) {
+                    adminLink.classList.remove('hidden');
+                    adminLink.classList.add('inline-block');
+                } else {
+                    adminLink.classList.add('hidden');
+                    adminLink.classList.remove('inline-block');
+                }
+
+                this.bindViewSpecificEvents();
+            },
+            bindViewSpecificEvents() {
+                if (AppState.currentView === 'shop') {
+                    const searchInput = document.getElementById('shop-search');
+                    if (searchInput) {
+                        searchInput.addEventListener('input', (e) => {
+                            AppState.searchQuery = e.target.value;
+                            const listGrid = document.querySelector('.lg\\:col-span-3');
+                            if (listGrid) {
+                                let updatedHtml = '';
+                                const filtered = ProductCatalog.filter(p => {
+                                    const matchCat = AppState.filterCategory === 'all' || p.category === AppState.filterCategory;
+                                    const matchSearch = p.name.toLowerCase().includes(AppState.searchQuery.toLowerCase());
+                                    return matchCat && matchSearch;
+                                });
+
+                                if (filtered.length === 0) {
+                                    updatedHtml = `
+                                        <div class="col-span-full h-96 flex flex-col items-center justify-center text-center space-y-4 bg-white rounded-2xl border border-[#8B735B]/10">
+                                            <p class="text-base font-semibold text-[#1C2316]">No matching assets resolved inside current parameters.</p>
+                                        </div>`;
+                                } else {
+                                    filtered.forEach(product => {
+                                        updatedHtml += `
+                                            <div class="group bg-white rounded-2xl border border-[#8B735B]/10 shadow-sm hover:shadow-[0_30px_60px_rgba(0,0,0,0.04)] -translate-y-0 hover:-translate-y-2 transition-all duration-500 flex flex-col overflow-hidden">
+                                                <div class="relative overflow-hidden aspect-square bg-[#F8F9F3] p-4 cursor-pointer" onclick="AppState.selectedProduct='${product.id}'; Navigation.navigate('detail');">
+                                                    <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover rounded-xl transform group-hover:scale-105 transition-transform duration-700">
+                                                    <span class="absolute top-4 left-4 bg-[#1C2316] text-white text-[9px] tracking-widest uppercase font-bold px-3 py-1.5 rounded-full shadow-sm">${product.weight}</span>
+                                                </div>
+                                                <div class="p-6 flex-1 flex flex-col justify-between space-y-4">
+                                                    <div class="space-y-1">
+                                                        <p class="text-[10px] tracking-widest uppercase font-bold text-[#8B735B]/60">${product.category}</p>
+                                                        <h3 class="text-base font-bold text-[#1C2316] line-clamp-1 cursor-pointer hover:text-[#5C9343] transition-colors" onclick="AppState.selectedProduct='${product.id}'; Navigation.navigate('detail');">${product.name}</h3>
+                                                        <p class="text-xs text-[#8B735B] line-clamp-2 font-light leading-relaxed">${product.description}</p>
+                                                    </div>
+                                                    <div class="pt-2 flex items-center justify-between border-t border-[#8B735B]/5">
+                                                        <span class="text-base font-extrabold text-[#1C2316]">₹${product.price}.00</span>
+                                                        <button onclick="CartEngine.addItem('${product.id}')" class="bg-[#5C9343] hover:bg-[#4a7735] text-white text-[10px] tracking-widest uppercase font-bold py-2.5 px-4 rounded-lg transition-all active:scale-95 shadow-sm">Allocate</button>
+                                                    </div>
+                                                </div>
+                                            </div>`;
+                                    });
+                                }
+                                listGrid.innerHTML = updatedHtml;
+                            }
+                        });
+                        searchInput.focus();
+                        searchInput.setSelectionRange(searchInput.value.length, searchInput.value.length);
+                    }
+                }
+
+                if (AppState.currentView === 'login') {
+                    const loginForm = document.getElementById('auth-form-matrix');
+                    if (loginForm) {
+                        loginForm.addEventListener('submit', (e) => {
+                            e.preventDefault();
+                            const mailVal = document.getElementById('auth-email').value;
+                            AppState.isAuthenticated = true;
+                            AppState.userEmail = mailVal;
+                            
+                            if (mailVal.toLowerCase() === 'admin@royal.com') {
+                                AppState.isAdmin = true;
+                                alert("Corporate security privileges loaded. Redirecting to Operations Matrix.");
+                                Navigation.navigate('admin');
+                            } else {
+                                AppState.isAdmin = false;
+                                alert("Profile verification validated successfully. Redirecting to Shop Directory.");
+                                Navigation.navigate('shop');
+                            }
+                        });
+                    }
+                }
+
+                if (AppState.currentView === 'upload') {
+                    const uploadForm = document.getElementById('product-upload-form');
+                    if (uploadForm) {
+                        uploadForm.addEventListener('submit', (e) => {
+                            e.preventDefault();
+                            CorporateProvisioning.executeInsertion();
+                        });
+                    }
+                }
+            }
+        };
+
+        // Initialize Runtime Process LifeCycle Engine
+        document.addEventListener('DOMContentLoaded', () => AppCore.init());
+    </script>
 </body>
 </html>
