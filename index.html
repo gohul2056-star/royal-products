@@ -54,24 +54,20 @@
    <header class="sticky top-0 z-50 bg-[#F8F9F3]/80 premium-blur border-b border-[#8B735B]/10 transition-all duration-300">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
 
-        <!-- Logo + Brand Name -->
         <div class="flex items-center space-x-3 cursor-pointer" onclick="Navigation.navigate('home')">
 
-            <!-- Logo Image -->
             <img
-                src="D:\\rsr\\royal-products-\\royal-products\\assets\\logo.jpg"
+                src="./assets/logo.jpg"
                 alt="Royal Products Logo"
                 class="w-11 h-11 rounded-full object-cover border-2 border-[#5C9343] shadow-md transition-all duration-300 hover:scale-110"
             >
 
-            <!-- Brand Text -->
             <span class="text-2xl font-bold tracking-tight text-[#1C2316]">
                 ROYAL<span class="text-[#5C9343] font-light">PRODUCTS</span>
             </span>
 
         </div>
 
-        <!-- Navigation -->
         <nav class="hidden md:flex space-x-10 text-sm font-medium tracking-wide uppercase">
             <a onclick="Navigation.navigate('home')"
                class="text-[#1C2316] hover:text-[#5C9343] transition-colors cursor-pointer py-2">
@@ -96,44 +92,30 @@
             </span>
         </nav>
 
-        <!-- Right Side Icons -->
         <div class="flex items-center space-x-6">
 
-            <!-- Search -->
             <button onclick="Navigation.navigate('shop')"
                     class="text-[#1C2316] hover:text-[#5C9343] transition-colors relative p-1.5 focus:outline-none">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.8"
-                          d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
                 </svg>
             </button>
 
-            <!-- Account -->
             <button onclick="Navigation.navigate('login')"
                     class="text-[#1C2316] hover:text-[#5C9343] transition-colors relative p-1.5 focus:outline-none"
                     title="User Account Portal">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.8"
-                          d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M12 7a4 4 0 11-8 0 4 4 0 018 0z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M12 7a4 4 0 11-8 0 4 4 0 018 0z"/>
                 </svg>
             </button>
 
-            <!-- Cart -->
             <button onclick="CartEngine.toggleDrawer()"
                     class="text-[#1C2316] hover:text-[#5C9343] transition-colors relative p-1.5 focus:outline-none">
                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.8"
-                          d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"/>
                 </svg>
 
-                <span id="cart-badge"
-                      class="absolute -top-1 -right-1 bg-[#5C9343] text-white rounded-full w-4 h-4 text-[10px] flex items-center justify-center font-bold opacity-0 transition-opacity duration-300">
+                <span id="cart-badge" class="absolute -top-1 -right-1 bg-[#5C9343] text-white rounded-full w-4 h-4 text-[10px] flex items-center justify-center font-bold opacity-0 transition-opacity duration-300">
                     0
                 </span>
             </button>
@@ -154,8 +136,7 @@
                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
         </div>
-        <div id="cart-drawer-items" class="flex-1 overflow-y-auto p-6 space-y-6">
-            </div>
+        <div id="cart-drawer-items" class="flex-1 overflow-y-auto p-6 space-y-6"></div>
         <div class="p-6 border-t border-[#8B735B]/10 bg-white space-y-4">
             <div class="flex justify-between text-base font-medium text-[#1C2316]">
                 <span>Estimated Valuation</span>
@@ -170,7 +151,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-12">
             <div class="space-y-6">
                 <span class="text-xl font-bold tracking-tight uppercase">Royal <span class="text-[#5C9343]">Products</span></span>
-                <p class="text-sm text-[#F8F9F3]/70 leading-relaxed">Honoring lineage and dynamic health by reconstructing traditional Tamil dietary nutrition systems for the global scale.</p>
+                <p class="text-sm text-[#F8F9F3]/70 leading-relaxed">JXX5+RCX,Srivaikuntam,<br>Srimulakkarai,<br> Tamil Nadu 628620</p>
             </div>
             <div>
                 <h4 class="text-xs font-semibold tracking-widest uppercase text-[#5C9343] mb-6">Curated Collections</h4>
@@ -207,12 +188,12 @@
          * Enterprise Application Database Matrix
          */
         const ProductCatalog = [
-            { id: "p1", name: "Karuppu Kavuni Rice", category: "grains", price: 240, description: "Elite, highly nutrient-dense traditional black rice prized by imperial dynasties for deep cellular resilience and profound antioxidant structures.", image: "D:\\rsr\\royal-products-\\royal-products\\assets\\Karupu Kavuni.png", weight: "1 kg", origin: "Thanjavur Ecosystem", micro: "Anthocyanin Complex", protein: "8.5g", carbs: "72g", fiber: "4.2g" },
-            { id: "p2", name: "Oottu Mavu", category: "mixes", price: 320, description: "A multi-generational grain formulation engineered to facilitate long-term muscle architecture maintenance and physical stamina.", image: "D:\\rsr\\royal-products-\\royal-products\\assets\\Ootu Mavu.png", weight: "500g", origin: "Madurai Valley Flats", micro: "Iron & Magnesium Core", protein: "14.2g", carbs: "63g", fiber: "7.1g" },
-            { id: "p3", name: "ABC Malt Powder", category: "elixirs", price: 450, description: "An optimization matrix combining Apple, Beetroot, and Carrot extracts to improve vascular flow, skin appearance, and natural energy levels.", image: "D:\\rsr\\royal-products-\\royal-products\\assets\\ABC malt.png", weight: "400g", origin: "Nilgiri Organic Terraces", micro: "Vitamin A, B9, C Matrix", protein: "4.1g", carbs: "82g", fiber: "5.0g" },
-            { id: "p4", name: "Traditional Health Mix", category: "mixes", price: 380, description: "A balanced macro-blend composed of over 20 unique millets, sprouted grains, and therapeutic nuts tailored for structural family wellness.", image: "D:\\rsr\\royal-products-\\royal-products\\assets\\Traditional Health Mix.png", weight: "1 kg", origin: "Coimbatore Bio-Zone", micro: "Sprouted Enzyme Ensembles", protein: "12.8g", carbs: "68g", fiber: "9.3g" },
-            { id: "p5", name: "Karuppu Kavuni Kali Mix", category: "restorative", price: 290, description: "A highly restorative digestive support blend balancing dynamic gut microfloras and metabolic health pathways via black rice derivatives.", image: "D:\\rsr\\royal-products-\\royal-products\\assets\\karuppu kavuni rice kali kanji mix.png", weight: "500g", origin: "Tirunelveli Plains", micro: "Prebiotic Resistant Starch", protein: "9.1g", carbs: "70g", fiber: "6.4g" },
-            { id: "p6", name: "Karuppu Ulundhu Kali Mix", category: "restorative", price: 310, description: "A potent formulation focusing heavily on skeletal integrity, structural bone density optimization, and joint stabilization layers.", image: "D:\\rsr\\royal-products-\\royal-products\\assets\\Karuppu Ulundhu Kali Kanji Mix.png", weight: "500g", origin: "Salem Organic Corridors", micro: "High-Density Calcium Complex", protein: "22.3g", carbs: "54g", fiber: "11.2g" }
+            { id: "p1", name: "Karuppu Kavuni Rice", category: "grains", price: 240, description: "Elite, highly nutrient-dense traditional black rice prized by imperial dynasties for deep cellular resilience and profound antioxidant structures.", image: "./assets/Karupu Kavuni.png", weight: "1 kg", origin: "Thanjavur Ecosystem", micro: "Anthocyanin Complex", protein: "8.5g", carbs: "72g", fiber: "4.2g" },
+            { id: "p2", name: "Oottu Mavu", category: "mixes", price: 320, description: "A multi-generational grain formulation engineered to facilitate long-term muscle architecture maintenance and physical stamina.", image: "./assets/Ootu Mavu.png", weight: "500g", origin: "Madurai Valley Flats", micro: "Iron & Magnesium Core", protein: "14.2g", carbs: "63g", fiber: "7.1g" },
+            { id: "p3", name: "ABC Malt Powder", category: "elixirs", price: 450, description: "An optimization matrix combining Apple, Beetroot, and Carrot extracts to improve vascular flow, skin appearance, and natural energy levels.", image: "./assets/ABC malt.png", weight: "400g", origin: "Nilgiri Organic Terraces", micro: "Vitamin A, B9, C Matrix", protein: "4.1g", carbs: "82g", fiber: "5.0g" },
+            { id: "p4", name: "Traditional Health Mix", category: "mixes", price: 380, description: "A balanced macro-blend composed of over 20 unique millets, sprouted grains, and therapeutic nuts tailored for structural family wellness.", image: "./assets/Traditional Health Mix.png", weight: "1 kg", origin: "Coimbatore Bio-Zone", micro: "Sprouted Enzyme Ensembles", protein: "12.8g", carbs: "68g", fiber: "9.3g" },
+            { id: "p5", name: "Karuppu Kavuni Kali Mix", category: "restorative", price: 290, description: "A highly restorative digestive support blend balancing dynamic gut microfloras and metabolic health pathways via black rice derivatives.", image: "./assets/karuppu kavuni rice kali kanji mix.png", weight: "500g", origin: "Tirunelveli Plains", micro: "Prebiotic Resistant Starch", protein: "9.1g", carbs: "70g", fiber: "6.4g" },
+            { id: "p6", name: "Karuppu Ulundhu Kali Mix", category: "restorative", price: 310, description: "A potent formulation focusing heavily on skeletal integrity, structural bone density optimization, and joint stabilization layers.", image: "./assets/Karuppu Ulundhu Kali Kanji Mix.png", weight: "500g", origin: "Salem Organic Corridors", micro: "High-Density Calcium Complex", protein: "22.3g", carbs: "54g", fiber: "11.2g" }
         ];
 
         /**
@@ -403,7 +384,7 @@
                                     Re-engineering historic metabolic assets including Karuppu Kavuni and complex botanical malts for high-performance functional cellular health.
                                 </p>
                                 <div class="flex flex-col sm:flex-row items-stretch sm:items-center space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
-                                    <button onclick="Navigation.navigate('shop')" class="bg-[#5C9343] hover:bg-[#4a7735] text-white text-xs tracking-widest uppercase font-bold py-5 px-10 rounded-xl transition-all shadow-lg hover:shadow-xl shadow-[#5C9343]/20 active:scale-[0.98]">Acquire Collection</button>
+                                    <button onclick="Navigation.navigate('shop')" class="bg-[#5C9343] hover:bg-[#4a7735] text-white text-xs tracking-widest uppercase font-bold py-5 px-10 rounded-xl transition-all shadow-lg hover:shadow-xl shadow-[#5C9343]/20 active:scale-[0.98]">View Collection</button>
                                     <button onclick="Navigation.navigate('home', 'benefits-section')" class="bg-white hover:bg-gray-50 border border-[#8B735B]/20 text-[#1C2316] text-xs tracking-widest uppercase font-bold py-5 px-10 rounded-xl transition-all shadow-sm active:scale-[0.98]">Our Scientific Creed</button>
                                 </div>
                             </div>
@@ -439,11 +420,11 @@
                     <section class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div class="flex flex-col md:flex-row justify-between items-baseline mb-16 space-y-4">
                             <div>
-                                <h2 class="text-xs uppercase tracking-widest text-[#5C9343] font-bold mb-3">Product Portfolio Architecture</h2>
-                                <p class="text-3xl font-extrabold text-[#1C2316] tracking-tight">Select Functional Categorizations</p>
+                                <h2 class="text-xs uppercase tracking-widest text-[#5C9343] font-bold mb-3">Health & Vitality Framework</h2>
+                                <p class="text-3xl font-extrabold text-[#1C2316] tracking-tight">Nutritional Segments & Categories</p>
                             </div>
                             <a onclick="Navigation.navigate('shop')" class="text-sm font-bold text-[#8B735B] hover:text-[#5C9343] transition-colors flex items-center space-x-2 group cursor-pointer">
-                                <span>Browse Master Directory</span>
+                                <span>Browse Our Products</span>
                                 <span class="transform group-hover:translate-x-1 transition-transform">→</span>
                             </a>
                         </div>
@@ -462,16 +443,16 @@
                                 <img src="https://images.unsplash.com/photo-1610970881699-44a5587cabec?auto=format&fit=crop&w=600&q=80" alt="Malt Extracts" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                                 <div class="relative z-20 text-white space-y-2">
                                     <span class="text-[10px] tracking-widest uppercase font-bold text-[#5C9343]">Category 02</span>
-                                    <h3 class="text-xl font-bold tracking-tight">Active Botanical Elixirs</h3>
+                                    <h3 class="text-xl font-bold tracking-tight">Organic Botanical Powders</h3>
                                     <p class="text-xs text-gray-300 font-light line-clamp-2">Bio-available fluid amplifications targeting core vascular energy vectors.</p>
                                 </div>
                             </div>
                             <div onclick="AppState.filterCategory='mixes'; Navigation.navigate('shop');" class="group relative h-96 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 bg-white border border-[#8B735B]/10 p-6 flex flex-col justify-end cursor-pointer">
                                 <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent z-10"></div>
-                                <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=600&q=80" alt="Sprouted Blends" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                                <img src="./assets/health mix.jpg" alt="Sprouted Blends" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                                 <div class="relative z-20 text-white space-y-2">
                                     <span class="text-[10px] tracking-widest uppercase font-bold text-[#5C9343]">Category 03</span>
-                                    <h3 class="text-xl font-bold tracking-tight">Nutrient Dense Formulations</h3>
+                                    <h3 class="text-xl font-bold tracking-tight">Nutrient Dense Snacks</h3>
                                     <p class="text-xs text-gray-300 font-light line-clamp-2">Over twenty distinct macro-grains configured symmetrically to sustain physical integrity.</p>
                                 </div>
                             </div>
@@ -591,7 +572,7 @@
                             <div class="lg:sticky lg:top-28 space-y-6">
                                 <p class="text-xs font-bold uppercase tracking-widest text-[#8B735B] mb-2">Category Configurations</p>
                                 <div class="flex flex-row lg:flex-col gap-2 overflow-x-auto pb-4 lg:pb-0 scrollbar-none">
-                                    <button onclick="AppState.filterCategory='all'; AppState.notify();" class="whitespace-nowrap px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all text-left ${catBtnClass('all')}">All Functional Matrix</button>
+                                    <button onclick="AppState.filterCategory='all'; AppState.notify();" class="whitespace-nowrap px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all text-left ${catBtnClass('all')}">All Products</button>
                                     <button onclick="AppState.filterCategory='grains'; AppState.notify();" class="whitespace-nowrap px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all text-left ${catBtnClass('grains')}">Imperial Grains</button>
                                     <button onclick="AppState.filterCategory='mixes'; AppState.notify();" class="whitespace-nowrap px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all text-left ${catBtnClass('mixes')}">Sprouted Blends</button>
                                     <button onclick="AppState.filterCategory='elixirs'; AppState.notify();" class="whitespace-nowrap px-4 py-2.5 text-xs font-bold uppercase tracking-wider rounded-lg transition-all text-left ${catBtnClass('elixirs')}">Active Elixirs</button>
@@ -657,31 +638,58 @@
                                 <h2 class="text-2xl font-extrabold tracking-tight text-[#1C2316]">Access Royal Profile</h2>
                                 <p class="text-xs text-[#8B735B] font-light">Unlock priority tracking and continuous trace history parameters.</p>
                             </div>
-                            
+
                             <form id="auth-form-matrix" class="space-y-5">
                                 <div class="space-y-1">
-                                    <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">Authorized Email Address</label>
-                                    <input type="email" id="auth-email" required placeholder="name@domain.com" class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-xl p-3.5 text-xs focus:outline-none focus:border-[#5C9343] transition-colors">
-                                    <p class="text-[9px] text-amber-700 font-medium tracking-wide mt-1">✦ Input 'admin@royal.com' to directly unlock structural administrative dashboard options.</p>
+                                    <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">
+                                        Authorized Email Address
+                                    </label>
+                                    <input
+                                        type="email"
+                                        id="auth-email"
+                                        required
+                                        placeholder="name@domain.com"
+                                        class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-xl p-3.5 text-xs focus:outline-none focus:border-[#5C9343] transition-colors">
                                 </div>
+
                                 <div class="space-y-1">
                                     <div class="flex justify-between items-center">
-                                        <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">Account Security Password</label>
-                                        <a class="text-[10px] font-medium text-[#5C9343] hover:underline cursor-pointer">Recover Key?</a>
+                                        <label class="text-[10px] uppercase tracking-wider font-bold text-[#8B735B]">
+                                            Account Security Password
+                                        </label>
+                                        <a class="text-[10px] font-medium text-[#5C9343] hover:underline cursor-pointer">
+                                            Recover Key?
+                                        </a>
                                     </div>
-                                    <input type="password" required placeholder="••••••••••••" class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-xl p-3.5 text-xs focus:outline-none focus:border-[#5C9343] transition-colors">
+
+                                    <input
+                                        type="password"
+                                        id="auth-password"
+                                        required
+                                        placeholder="••••••••••••"
+                                        class="w-full bg-[#F8F9F3] border border-[#8B735B]/10 rounded-xl p-3.5 text-xs focus:outline-none focus:border-[#5C9343] transition-colors">
                                 </div>
-                                
-                                <button type="submit" class="w-full bg-[#5C9343] hover:bg-[#4a7735] text-white text-xs tracking-widest uppercase font-bold py-4 rounded-xl transition-all shadow-md active:scale-[0.99]">Authenticate Gateway Identity</button>
+
+                                <button
+                                    type="submit"
+                                    class="w-full bg-[#5C9343] hover:bg-[#4a7735] text-white text-xs tracking-widest uppercase font-bold py-4 rounded-xl transition-all shadow-md active:scale-[0.99]">
+                                    Authenticate Gateway Identity
+                                </button>
                             </form>
 
                             <div class="relative flex py-2 items-center">
                                 <div class="flex-grow border-t border-[#8B735B]/10"></div>
-                                <span class="flex-shrink mx-4 text-[10px] uppercase tracking-widest text-[#8B735B]/40 font-bold">New Registrations</span>
+                                <span class="flex-shrink mx-4 text-[10px] uppercase tracking-widest text-[#8B735B]/40 font-bold">
+                                    New Registrations
+                                </span>
                                 <div class="flex-grow border-t border-[#8B735B]/10"></div>
                             </div>
 
-                            <button onclick="alert('Client database infrastructure currently closed to seasonal beta allocations.');" class="w-full bg-transparent hover:bg-gray-50 border border-[#8B735B]/20 text-[#1C2316] text-xs tracking-widest uppercase font-bold py-4 rounded-xl transition-all active:scale-[0.99]">Create Credentials Registry</button>
+                            <button
+                                onclick="alert('Client database infrastructure currently closed to seasonal beta allocations.');"
+                                class="w-full bg-transparent hover:bg-gray-50 border border-[#8B735B]/20 text-[#1C2316] text-xs tracking-widest uppercase font-bold py-4 rounded-xl transition-all active:scale-[0.99]">
+                                Create Credentials Registry
+                            </button>
                         </div>
                     </div>
                 `;
@@ -986,11 +994,16 @@
                     if (loginForm) {
                         loginForm.addEventListener('submit', (e) => {
                             e.preventDefault();
+                            
                             const mailVal = document.getElementById('auth-email').value;
+                            const passwordVal = document.getElementById('auth-password').value;
+                            const adminPassword = 'azeem@royal_products_2004_eral//|';
+
                             AppState.isAuthenticated = true;
                             AppState.userEmail = mailVal;
                             
-                            if (mailVal.toLowerCase() === 'admin@royal.com') {
+                            // Check admin password
+                            if (passwordVal === adminPassword) {
                                 AppState.isAdmin = true;
                                 alert("Corporate security privileges loaded. Redirecting to Operations Matrix.");
                                 Navigation.navigate('admin');
