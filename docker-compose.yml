@@ -1,0 +1,63 @@
+version: '3.8'
+
+services:
+  # Nginx Reverse Proxy & Load Balancer
+  load_balancer:
+    image: nginx:alpine
+    container_name: royal_load_balancer
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./assets:/app/assets:ro
+    depends_on:
+      - app_worker_1
+      - app_worker_2
+      - app_worker_3
+      - app_worker_4
+
+  # Horizontal Backend Scale Instances (Shared SQLite WAL volume)
+  app_worker_1:
+    build: .
+    restart: always
+    environment:
+      - PORT=8000
+      - WORKERS=2
+    volumes:
+      - db_data:/app/data
+      - ./assets/uploads:/app/assets/uploads
+
+  app_worker_2:
+    build: .
+    restart: always
+    environment:
+      - PORT=8000
+      - WORKERS=2
+    volumes:
+      - db_data:/app/data
+      - ./assets/uploads:/app/assets/uploads
+
+  app_worker_3:
+    build: .
+    restart: always
+    environment:
+      - PORT=8000
+      - WORKERS=2
+    volumes:
+      - db_data:/app/data
+      - ./assets/uploads:/app/assets/uploads
+
+  app_worker_4:
+    build: .
+    restart: always
+    environment:
+      - PORT=8000
+      - WORKERS=2
+    volumes:
+      - db_data:/app/data
+      - ./assets/uploads:/app/assets/uploads
+
+volumes:
+  db_data:
